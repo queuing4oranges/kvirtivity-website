@@ -1,15 +1,20 @@
 import './App.scss';
-import { Button } from 'reactstrap';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Home from './components/home/Home';
+import Calendar from './components/calendar/Calendar';
 
 function App() {
 
 
 	return (
-		<>
-			<h1>Hello World</h1>
-			<button className='btn btn-danger'>Danger</button>
-			<Button color='info'>Info</Button>
-		</>
+		<div className='App'>
+			<BrowserRouter basename='/'>
+				<Routes>
+					<Route exact path='/' element={<Home />} />
+					<Route path='/calendar' element={<Calendar />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
 	)
 }
 
