@@ -1,7 +1,18 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import {
+	Container, Row, Col,
+	Card, CardHeader, CardBody
+} from 'reactstrap';
+
+import Navbar from '../navbar/Navbar';
 import apiClient from '../../api';
+// TODO Make spinner component for loading
+// Make alert if it isnt possible to get events
 
 function Calendar() {
+	const { t } = useTranslation();
 	const [events, setEvents] = useState([]);
 	
 	useEffect(() => {
@@ -16,12 +27,15 @@ function Calendar() {
 			}
 			setEvents(response.data);
 		} catch {
-			console.error('Could not retrieve events')
+			console.error('Could not retrieve events');
 		}
 	};
 	
 	return (
-		<div>Calendar</div>
+		<Container>
+			<Navbar />
+			<Row><h2>{t('Kalendář')}</h2></Row>
+		</Container>
 	)
 }
 
