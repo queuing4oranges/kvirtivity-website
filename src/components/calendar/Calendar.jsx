@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import apiClient from '../../api';
 
 function Calendar() {
@@ -11,11 +11,14 @@ function Calendar() {
 	const getEvents = async () => {
 		try {
 			const response = await apiClient.get('/events/read.php');
-			console.log(response.data, 'response from request')
+			if(response.status !== 200) {
+				throw new Error(`Something went wrong. Response status: ${response.status}`);
+			}
+			setEvents(response.data);
 		} catch {
-			//
+			console.error('Could not retrieve events')
 		}
-	}
+	};
 	
 	return (
 		<div>Calendar</div>
