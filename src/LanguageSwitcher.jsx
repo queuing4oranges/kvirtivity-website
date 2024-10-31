@@ -1,24 +1,29 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+import './languageswitcher.scss';
 
 export default function LanguageSwitcher() {
 	const { i18n } = useTranslation();
-	const [dropdownOpen, setDropdownOpen] = useState(false);
-	
-	const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+	const [language, setLanguage] = useState('cz');
 	
 	const changeLanguage = (lang) => {
+		setLanguage(lang);
 		i18n.changeLanguage(lang);
 	};
 	
 	return (
-	<Dropdown isOpen={dropdownOpen} toggle={toggleDropdown}>
-		<DropdownToggle caret>Language</DropdownToggle>
-		<DropdownMenu>
-			<DropdownItem onClick={() => changeLanguage('cz')}>česky</DropdownItem>
-			<DropdownItem onClick={() => changeLanguage('en')}>english</DropdownItem>
-		</DropdownMenu>
-	</Dropdown>
+		<div className='switch position-relative d-inline-block my-0 mx-2'>
+			<input
+				id='language-toggle'
+				className='check-toggle check-toggle-round-flat'
+				type='checkbox'
+				checked={language === 'en'}
+				onChange={() => changeLanguage(language === 'cz' ? 'en' : 'cz')}
+			/>
+			<label htmlFor='language-toggle'/>
+			<span className='on' onClick={() => changeLanguage('en')}>CZ</span>
+			<span className='off' onClick={() => changeLanguage('cz')}>EN</span>
+		</div>
 	)
 }
