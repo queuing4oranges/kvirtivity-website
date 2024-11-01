@@ -22,8 +22,8 @@ export default function LanguageSwitcher() {
 				onChange={() => changeLanguage(language === 'cz' ? 'en' : 'cz')}
 			/>
 			<label htmlFor='language-toggle'/>
-			<span className='on' onClick={() => changeLanguage('en')}>CZ</span>
-			<span className='off' onClick={() => changeLanguage('cz')}>EN</span>
+			<span className='on'>CZ</span>
+			<span className='off'>EN</span>
 		</div>
 	)
 }

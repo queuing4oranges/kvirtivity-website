@@ -12,7 +12,7 @@
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-	color: #F36F25;
+	color: $secondary-bg;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
@@ -22,7 +22,7 @@ input.check-toggle-round-flat:checked ~ .on {
 .switch > span.on {
 	left: 0;
 	padding-left: 2px;
-	color: #F36F25;
+	color: $primary-bg;
 }
 
 .switch > span.off {
