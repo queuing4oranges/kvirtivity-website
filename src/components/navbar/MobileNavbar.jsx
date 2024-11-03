@@ -1,18 +1,33 @@
-import React from 'react';
-import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import {
+	Collapse,
+	NavbarToggler, Nav, NavItem, NavLink,
+	Navbar
+} from 'reactstrap';
+
+import { navLinks } from './navLinks';
+import LanguageSwitcher from '../../LanguageSwitcher';
 
 export default function MobileNavbar() {
-  return (
-	<UncontrolledDropdown nav inNavbar>
-		<DropdownToggle nav caret>
-			Options
-		</DropdownToggle>
-		<DropdownMenu right>
-			<DropdownItem>Option 1</DropdownItem>
-			<DropdownItem>Option 2</DropdownItem>
-			<DropdownItem divider />
-			<DropdownItem>Reset</DropdownItem>
-		</DropdownMenu>
-	</UncontrolledDropdown>
-  )
+	const [isOpen, setIsOpen] = useState(false);
+	const { t } = useTranslation();
+
+	return (
+		<Navbar>
+			<span className='d-flex justify-content-between w-100'>
+				<NavbarToggler onClick={() => setIsOpen(!isOpen)} />
+				<LanguageSwitcher />
+			</span>
+			<Collapse isOpen={isOpen} navbar>
+				<Nav className="me-auto" navbar>
+					{navLinks && navLinks.map((link, idx) => (
+						<NavItem key={idx}>
+							<NavLink href={link.to}>{t(link.name)}</NavLink>
+						</NavItem>
+					))}
+				</Nav>
+			</Collapse>
+		</Navbar>
+	)
 }
