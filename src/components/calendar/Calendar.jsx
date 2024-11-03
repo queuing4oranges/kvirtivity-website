@@ -6,8 +6,8 @@ import {
 	Card, CardHeader, CardBody
 } from 'reactstrap';
 
-import Navbar from '../navbar/Navbar';
 import apiClient from '../../api';
+import NavbarContainer from '../navbar/NavbarContainer';
 // TODO Make spinner component for loading
 // Make alert if it isnt possible to get events
 
@@ -32,10 +32,11 @@ function Calendar() {
 	};
 	
 	return (
-		<Container>
-			<Navbar />
-			<Row><h2>{t('Kalendář')}</h2></Row>
-		</Container>
+		<>
+			<Container className='w-100 m-0'>
+				{/* <Row><h2>{t('Kalendář')}</h2></Row> */}
+			</Container>
+		</>
 	)
 }
 
