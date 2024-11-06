@@ -9,12 +9,14 @@ import {
 import { navLinks } from './navLinks';
 import LanguageSwitcher from '../../LanguageSwitcher';
 
+import './mobilenavbar.scss';
+
 export default function MobileNavbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const { t } = useTranslation();
 
 	return (
-		<Navbar>
+		<Navbar className='mobile-navbar'>
 			<span className='d-flex justify-content-between w-100'>
 				<NavbarToggler onClick={() => setIsOpen(!isOpen)} />
 				<LanguageSwitcher />

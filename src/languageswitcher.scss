@@ -1,3 +1,5 @@
+@use "./variables.scss" as vars;
+
 .switch > span {
 	position: absolute;
 	top: 10px;
@@ -12,7 +14,7 @@
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-	color: $secondary-bg;
+	color: vars.$secondary-bg;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
@@ -22,7 +24,7 @@ input.check-toggle-round-flat:checked ~ .on {
 .switch > span.on {
 	left: 0;
 	padding-left: 2px;
-	color: $primary-bg;
+	color: vars.$primary-bg;
 }
 
 .switch > span.off {

@@ -1,6 +1,6 @@
 export const navLinks = [
 	{
-		to: '/calendar',
+		to: '/kalendar',
 		name: 'Kalendář'
 	},
 	{

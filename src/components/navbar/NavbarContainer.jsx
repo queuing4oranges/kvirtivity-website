@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-	Navbar, NavbarBrand, Nav, NavItem, NavLink,
+	Navbar, Nav, NavItem, NavLink,
 	Container, Col,
 } from 'reactstrap';
 
@@ -43,7 +43,7 @@ export default function NavbarContainer() {
 					{/* TODO style navbar in brand colors */}
 					<Navbar>
 						<Col md='3'>
-							<NavbarBrand><KvirtivityLogo height={50} width={150}/></NavbarBrand>
+							<NavLink href={'/'}><KvirtivityLogo height={50} width={150}/></NavLink>
 						</Col>
 						<Col md='8' className='d-flex justify-content-end'>
 							<Nav>
