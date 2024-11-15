@@ -2,5 +2,20 @@
 	"Kalendář": "Calendar",
 	"Galerie": "Gallery",
 	"O Nás": "About us",
-	"Kontakt": "Contact"
+	"Kontakt": "Contact",
+
+	"Months": {
+		"Led": "Jan",
+		"Úno": "Feb",
+		"Bře": "Mar",
+		"Dub": "Apr",
+		"Kvě": "May",
+		"Čvn": "Jun",
+		"Čvc": "Jul",
+		"Srp": "Aug",
+		"Zář": "Sep",
+		"Říj": "Oct",
+		"Lis": "Nov",
+		"Pro": "Dec"
+  }
 }

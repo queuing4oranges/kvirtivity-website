@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
 		if (i18n.language !== language) {
 			i18n.changeLanguage(language);
 		}
-	})
+	},[language, i18n])
 
 	const changeLanguage = (lang) => {
 		setLanguage(lang);

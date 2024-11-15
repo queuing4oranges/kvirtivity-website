@@ -2,5 +2,20 @@
 	"Kalendář": "Kalendář",
 	"Galerie": "Galerie",
 	"O Nás": "O Nás",
-	"Kontakt": "Kontakt"
+	"Kontakt": "Kontakt",
+
+	"Months": {
+		"Led": "Led",
+		"Úno": "Úno",
+		"Bře": "Bře",
+		"Dub": "Dub",
+		"Kvě": "Kvě",
+		"Čvn": "Čvn",
+		"Čvc": "Čvc",
+		"Srp": "Srp",
+		"Zář": "Zář",
+		"Říj": "Říj",
+		"Lis": "Lis",
+		"Pro": "Pro"
+	}
 }
