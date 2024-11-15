@@ -1,0 +1,15 @@
+.calendar-container {
+	.events-wrapper {
+		.events-container {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 30px;
+			.card {
+				width: 300px;
+				height: 300px;
+			}
+		}
+		
+	}
+	
+}
