@@ -7,7 +7,9 @@
 	"Zavřít": "Zavřít",
 
 	"Events": {
-		"Přihlášeni": "Přihlášeni"
+		"Přihlášeni": "Přihlášeni",
+		"Přidat do Kalendáře Google": "Přidat do Kalendáře Google",
+		"Přidat do Kalendáře Apple": "Přidat do Kalendáře Apple"
 	},
 
   "Months": {

@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import moment from 'moment-timezone';
+
 import { Card, Row, Col, Button } from 'reactstrap';
 
 import { GlobalContext } from '../../utils/GlobalContextProvider';
@@ -35,7 +37,7 @@ export default function SingleEventContainer() {
 		const formattedStartTime = startTime.format('YYYYMMDDTHHmmss');
 		const formattedEndTime = endTime.format('YYYYMMDDTHHmmss');
 
-		const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(name)}&dates=${formattedStartTime}/${formattedEndTime}&location=${encodeURIComponent(loc_address)}&sprop=&sprop=name:`;
+		const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(name)}&dates=${formattedStartTime}/${formattedEndTime}&location=${encodeURIComponent(address)}&sprop=&sprop=name:`;
 		
 		window.open(googleCalendarUrl, '_blank');
 	}
@@ -60,7 +62,7 @@ export default function SingleEventContainer() {
 			SUMMARY:${name}
 			DTSTART:${formattedStartTime}
 			DTEND:${formattedEndTime}
-			LOCATION:${loc_address}
+			LOCATION:${address}
 			END:VEVENT
 			END:VCALENDAR
 		`);
@@ -111,7 +113,7 @@ export default function SingleEventContainer() {
 			{/* TODO add to calendar button */}
 			{/* TODO sign up button for speed dating etc. */}
 			<Row className='w-100 g-0 d-flex justify-content-between'>
-				<Col md={6} className='h-100'>
+				<Col md={5} className='h-100'>
 					{name && <Row className='mb-4 w-100'>
 						<Col><h4>{name}</h4></Col>
 					</Row>
@@ -169,8 +171,23 @@ export default function SingleEventContainer() {
 					</Row>
 					}
 				</Col>
-
-				<Col md={6} className='h-100 position-relative'>
+				<Col md={2} className='add-to-calendar-button d-flex flex-column align-items-center'>
+					<Button
+						color='info'
+						title={t('Events.Přidat do Kalendáře Google')}
+						onClick={() => handleGoogleCalendar()}
+					>
+						<i className='bi bi-google' />
+					</Button>
+					<Button
+						color='info'
+						title={t('Events.Přidat do Kalendáře Apple')}
+						onClick={() => handleAppleCalendar()}
+					>
+						<i className='bi bi-apple' />
+					</Button>
+				</Col>
+				<Col md={5} className='h-100 position-relative'>
 					<Button
 						outline
 						color='secondary'

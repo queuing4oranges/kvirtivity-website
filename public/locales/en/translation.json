@@ -7,8 +7,10 @@
 	"Zavřít": "Close",
 
 	"Events": {
-		"Přihlášeni": "Sign up"
-	},
+    "Přihlášeni": "Sign up",
+    "Přidat do Kalendáře Google": "Add to Google calendar",
+    "Přidat do Kalendáře Apple": "Add to Apple calendar"
+  },
 
 	"Months": {
 		"Led": "Jan",
