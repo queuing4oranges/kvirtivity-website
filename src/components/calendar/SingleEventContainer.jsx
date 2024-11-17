@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
-import { Container, Card, Row, Col, Button } from 'reactstrap';
+import { useTranslation } from 'react-i18next';
+import { Card, Row, Col, Button } from 'reactstrap';
 
 import { GlobalContext } from '../../utils/GlobalContextProvider';
+import { API_BASE_URL } from '../../api';
 
 import './singleeventcontainer.scss';
 
 export default function SingleEventContainer() {
+	const { t } = useTranslation();
 	const { events, showSingleEvent, singleEventId, setShowSingleEvent } = useContext(GlobalContext);
 
 	// Find selected event in events array
@@ -101,17 +104,16 @@ export default function SingleEventContainer() {
 	}
 	
 	return (
-		<>
-			<div
-				key={date}
-				className='w-100 h-100 d-flex border'
-			>
-				{/* TODO make a back button somewhere - this can have the same fct as my portfolio eye btn */}
-				{/* TODO add to calendar button */}
-				{/* TODO sign up button for speed dating etc. */}
+		<div
+			key={date}
+			className='w-100 h-100 d-flex flex-column m-0 p-0'
+		>
+			{/* TODO make a back button somewhere - this can have the same fct as my portfolio eye btn */}
+			{/* TODO add to calendar button */}
+			{/* TODO sign up button for speed dating etc. */}
+			<Row className='w-100 g-0 d-flex justify-content-between'>
 				<Col md={6} className='h-100'>
 					{name && <Row>
-						<Col md={1}></Col>
 						<Col><h3>{name}</h3></Col>
 					</Row>
 					}
@@ -147,33 +149,45 @@ export default function SingleEventContainer() {
 					</Row>
 					}
 					{capacity && <Row>
-						<Col md={1}><i className='bi bi-cash-coin'/></Col>
-						<Col>{price}</Col>
+						<Col md={1}><i className='bi bi-people'/></Col>
+						<Col>{capacity}</Col>
 					</Row>
 					}
-					{signup && <Row>
+					{description && <Row>
+						<Col md={1}><i className='bi bi-info-square'/></Col>
+						<Col>{description}</Col>
+					</Row>
+					}
+					{signup && (signup === 1) && <Row>
 						{/* TODO make a reusable button here */}
-						<Col md={6}>
-							<i className='bi bi-pencil-square'/>
-							Sign up for event
+						<Col md={6} className='ps-0'>
+							<Button>
+								<i className='bi bi-person-plus me-3'/>
+								{t('Events.Přihlášeni')}
+							</Button>
 						</Col>
 					</Row>
 					}
 				</Col>
-				
+
 				<Col md={6} className='h-100 position-relative'>
 					<Button
 						outline
 						color='secondary'
+						title={t('Zavřít')}
 						className='event-close-btn position-absolute top-0 end-0 p-0 zindex-3'
 						onClick={() => setShowSingleEvent(!showSingleEvent)}
 					>
 						<i className='bi bi-x-lg fs-2 fw-5' />
 					</Button>
 					<Row>
-						
-						{/* TODO make a fallback picture */}
-						{/* image */}
+						<img
+							/* TODO make a fallback picture */
+							src={`${API_BASE_URL}/events/images/${image}`}
+							alt={name}
+							loading='eager'
+							style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+						/>
 					</Row>
 
 					<Row>
@@ -181,7 +195,29 @@ export default function SingleEventContainer() {
 					</Row>
 
 				</Col>
-			</div>
-		</>
+			</Row>
+			<Row md='12' className='w-100 g-0 d-flex justify-content-center'>
+				<div
+					className='w-100 h-100 d-flex position-relative'
+					onClick={() => {
+						// Open Google Maps in a new tab with the specified location
+						const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+						window.open(url, '_blank');
+						}}
+				>
+					<iframe
+						id='iframeId'
+						height='300rem'
+						width='100%'
+						src={`https://maps.google.com/maps?q=${latitude},${longitude}&hl=es;&output=embed`}
+					/>
+					{/* Transparent overlay to capture clicks */}
+					<span
+						className='overlay-thingy position-absolute top-0 left-0 w-100 h-100 zindex-1'
+						style={{ background: 'transparent' }}
+					/>
+				</div>
+			</Row>
+		</div>
 	);
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -41,7 +41,7 @@ function Calendar() {
 				<Row>{/* TODO there should be some filtering for the events */}</Row>
 				{(showSingleEvent === false)
 					? <Row className='events-container mt-5'><EventsContainer /> </Row>
-					: <Row className='w-75 h-100 mt-5'><SingleEventContainer/></Row>
+					: <Row className='w-75 h-100 mt-5 mx-0'><SingleEventContainer/></Row>
 				}
 			</div>
 		</Container>

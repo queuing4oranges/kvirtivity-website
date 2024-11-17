@@ -1,4 +1,8 @@
 .event-close-btn {
 	margin-top: -3rem;
 	--bs-btn-border-color: none !important;
+	&:hover {
+		background-color: transparent !important;
+		color: red !important;
+	}
 }

@@ -4,18 +4,24 @@
 	"O Nás": "O Nás",
 	"Kontakt": "Kontakt",
 
-	"Months": {
-		"Led": "Led",
-		"Úno": "Úno",
-		"Bře": "Bře",
-		"Dub": "Dub",
-		"Kvě": "Kvě",
-		"Čvn": "Čvn",
-		"Čvc": "Čvc",
-		"Srp": "Srp",
-		"Zář": "Zář",
-		"Říj": "Říj",
-		"Lis": "Lis",
-		"Pro": "Pro"
-	}
+	"Zavřít": "Zavřít",
+
+	"Events": {
+		"Přihlášeni": "Přihlášeni"
+	},
+
+  "Months": {
+	"Led": "Led",
+	"Úno": "Úno",
+	"Bře": "Bře",
+	"Dub": "Dub",
+	"Kvě": "Kvě",
+	"Čvn": "Čvn",
+	"Čvc": "Čvc",
+	"Srp": "Srp",
+	"Zář": "Zář",
+	"Říj": "Říj",
+	"Lis": "Lis",
+	"Pro": "Pro"
+  }
 }

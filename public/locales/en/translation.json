@@ -4,6 +4,12 @@
 	"O Nás": "About us",
 	"Kontakt": "Contact",
 
+	"Zavřít": "Close",
+
+	"Events": {
+		"Přihlášeni": "Sign up"
+	},
+
 	"Months": {
 		"Led": "Jan",
 		"Úno": "Feb",
