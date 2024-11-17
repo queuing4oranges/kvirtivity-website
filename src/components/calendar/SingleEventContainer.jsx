@@ -108,59 +108,59 @@ export default function SingleEventContainer() {
 			key={date}
 			className='w-100 h-100 d-flex flex-column m-0 p-0'
 		>
-			{/* TODO make a back button somewhere - this can have the same fct as my portfolio eye btn */}
 			{/* TODO add to calendar button */}
 			{/* TODO sign up button for speed dating etc. */}
 			<Row className='w-100 g-0 d-flex justify-content-between'>
 				<Col md={6} className='h-100'>
-					{name && <Row>
-						<Col><h3>{name}</h3></Col>
+					{name && <Row className='mb-4 w-100'>
+						<Col><h4>{name}</h4></Col>
 					</Row>
 					}
-					{date && <Row>
+					{/* TODO make date readable */}
+					{date && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-calendar2-heart'/></Col>
-						<Col>{date}</Col>
+						<Col><p>{date}</p></Col>
 					</Row>
 					}
-					{time && <Row>
+					{time && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-clock'/></Col>
-						<Col>{time}</Col>
+						<Col><p>{time}</p></Col>
 					</Row>
 					}
-					{locationName && <Row>
+					{locationName && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-geo-alt'/></Col>
-						<Col>{locationName}</Col>
+						<Col><p>{locationName}</p></Col>
 					</Row>
 					}
-					{website && <Row>
+					{website && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-globe'/></Col>
-						<Col>{website}</Col>
+						<Col><p>{website}</p></Col>
 					</Row>
 					}
-					{address && <Row>
+					{address && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-map'/></Col>
-						<Col>{address}</Col>
+						<Col><p>{address}</p></Col>
 					</Row>
 					}
-					{price && <Row>
+					{price && <Row className='w-100'>
 						{/* TODO exclude 0 values coming from DB */}
 						<Col md={1}><i className='bi bi-cash-coin'/></Col>
-						<Col>{price}</Col>
+						<Col><p>{price}</p></Col>
 					</Row>
 					}
-					{capacity && <Row>
+					{capacity && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-people'/></Col>
-						<Col>{capacity}</Col>
+						<Col><p>{capacity}</p></Col>
 					</Row>
 					}
-					{description && <Row>
+					{description && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-info-square'/></Col>
-						<Col>{description}</Col>
+						<Col><p>{description}</p></Col>
 					</Row>
 					}
-					{signup && (signup === 1) && <Row>
+					{signup && (signup === 1) && <Row className='mt-5'>
 						{/* TODO make a reusable button here */}
-						<Col md={6} className='ps-0'>
+						<Col md={6} className=''>
 							<Button>
 								<i className='bi bi-person-plus me-3'/>
 								{t('Events.Přihlášeni')}
@@ -186,17 +186,14 @@ export default function SingleEventContainer() {
 							src={`${API_BASE_URL}/events/images/${image}`}
 							alt={name}
 							loading='eager'
-							style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+							className='single-event-image'
 						/>
 					</Row>
-
-					<Row>
-						{/* google maps */}
-					</Row>
-
 				</Col>
 			</Row>
-			<Row md='12' className='w-100 g-0 d-flex justify-content-center'>
+
+			{/* TODO make below separate component */}
+			<Row md='12' className='w-100 g-0 d-flex justify-content-center mt-4'>
 				<div
 					className='w-100 h-100 d-flex position-relative'
 					onClick={() => {

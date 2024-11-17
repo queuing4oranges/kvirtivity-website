@@ -7,7 +7,7 @@ import './App.scss';
 
 function App() {
 	return (
-		<div className='h-100 w-100' style={{border: "2px solid orange"}}>
+		<div className='h-100 w-100'>
 			<GlobalContextProvider>
 				<BrowserRouter basename='/'>
 					<NavbarContainer/>
