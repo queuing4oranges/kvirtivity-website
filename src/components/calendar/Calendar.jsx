@@ -36,7 +36,7 @@ function Calendar() {
 	
 	return (
 		<Container fluid className='h-100 p-5 calendar-container'>
-			<Row><h2>{t('Kalendář')}</h2></Row>
+			<Row><h1>{t('Kalendář')}</h1></Row>
 			<div className='w-100 h-100 d-flex events-wrapper flex-column align-items-center'>
 				<Row>{/* TODO there should be some filtering for the events */}</Row>
 				{(showSingleEvent === false)

@@ -227,7 +227,7 @@ export default function SingleEventContainer() {
 					/>
 					{/* Transparent overlay to capture clicks */}
 					<span
-						className='overlay-thingy position-absolute top-0 left-0 w-100 h-100 zindex-1'
+						className='position-absolute top-0 left-0 w-100 h-100 zindex-1'
 						style={{ background: 'transparent' }}
 					/>
 				</div>

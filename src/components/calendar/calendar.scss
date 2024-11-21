@@ -1,4 +1,12 @@
+@use '../../../src/variables.scss' as vars;
+
 .calendar-container {
+	background-color: vars.$primary-bg;
+
+	h1 {
+		color: vars.$title-color;
+	}
+
 	.events-wrapper {
 		.events-container {
 			display: grid;
@@ -7,9 +15,75 @@
 			.card {
 				width: 300px;
 				height: 300px;
+				position: relative;
+				overflow: visible !important;
+				background-color: vars.$text-color;
+				--bs-card-border-color: none !important;
+				&:hover {
+					background-color: vars.$secondary-bg;
+					cursor: pointer;
+					h4 {
+						color: vars.$primary-bg;
+					}
+					p {
+						color: vars.$title-color !important;
+					}
+					.date-square {
+						background-color: vars.$secondary-bg;
+						transition: all 0.5s ease-in-out; // Smooth transition for background, size, and shape
+						transform: scale(2); // Transform to create the star effect
+						clip-path: polygon(
+							50% 0%,
+							62% 28%,
+							98% 35%,
+							72% 58%,
+							82% 95%,
+							50% 75%,
+							18% 95%,
+							28% 58%,
+							2% 35%,
+							38% 28%
+						); // Star shape
+
+						span {
+							position: relative; // Ensures text remains unaffected
+							z-index: 2; // Keeps text above the star background
+							font-size: x-small;
+						}
+					}
+				}
+
+				h4 {
+					color: vars.$title-color;
+					font-family: vars.$primary-font;
+					font-weight: 600;
+				}
+
+				p {
+					color: vars.$primary-bg !important;
+					font-weight: 600;
+				}
+
+				.date-square {
+					background-color: vars.$accent-color;
+					opacity: 0.9;
+					color: vars.$primary-bg;
+					transition: all 0.4s ease-in-out; // Smooth transition
+					width: 60px; // Slightly larger initial size
+					height: 60px;
+					border-radius: 4px 0 4px 0; // Default square shape
+					clip-path: none; // Initially no special shape
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					font-size: 0.8rem;
+					position: absolute;
+					top: 10px;
+					left: 10px; // Adjust as needed for positioning
+					z-index: 1; // Ensure it stays on top of other elements
+				}
 			}
 		}
-		
 	}
-	
 }

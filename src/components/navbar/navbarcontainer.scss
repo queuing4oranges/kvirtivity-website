@@ -1,0 +1,12 @@
+@use '../../../src/variables.scss' as vars;
+
+.navbar-container {
+	background-color: vars.$primary-bg;
+	
+	.nav-link {
+		color: vars.$text-color;
+		&:hover {
+			color: vars.$secondary-bg;
+		}
+	}
+}

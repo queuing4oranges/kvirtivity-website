@@ -11,6 +11,8 @@ import MobileNavbar from './MobileNavbar.jsx';
 import LanguageSwitcher from '../../LanguageSwitcher';
 import KvirtivityLogo from '../../Kvirtivity-Logo.jsx';
 
+import './navbarcontainer.scss';
+
 export default function NavbarContainer() {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const { t } = useTranslation();
@@ -39,7 +41,7 @@ export default function NavbarContainer() {
 			{showMobileMenu ? (
 				<MobileNavbar />
 			) : (
-				<Container fluid>
+				<Container fluid className='navbar-container'>
 					{/* TODO style navbar in brand colors */}
 					<Navbar>
 						<Col md='3'>
