@@ -14,11 +14,11 @@
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-	color: vars.$secondary-bg;
+	color: vars.$primary-bg;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
-	color: #fff;
+	color: vars.$title-color;
 }
 
 .switch > span.on {
@@ -30,7 +30,7 @@ input.check-toggle-round-flat:checked ~ .on {
 .switch > span.off {
 	right: 0;
 	padding-right: 4px;
-	color: #fff;
+	color: vars.$title-color;
 }
 
 .check-toggle {
@@ -53,7 +53,7 @@ input.check-toggle-round-flat + label {
 	padding: 2px;
 	width: 97px;
 	height: 35px;
-	background-color: #F36F25;
+	background-color: vars.$secondary-bg;
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
 	-ms-border-radius: 60px;
@@ -71,7 +71,7 @@ input.check-toggle-round-flat + label:before {
 	left: 2px;
 	bottom: 2px;
 	right: 2px;
-	background-color: #F36F25;
+	background-color: vars.$secondary-bg;
 	-webkit--moz-border-radius: 60px;
 	-ms-border-radius: 60px;
 	-o-border-radius: 60px;
@@ -82,7 +82,7 @@ input.check-toggle-round-flat + label:after {
 	left: 4px;
 	bottom: 4px;
 	width: 48px;
-	background-color: #fff;
+	background-color: vars.$title-color;
 	-webkit-border-radius: 52px;
 	-moz-border-radius: 52px;
 	-ms-border-radius: 52px;

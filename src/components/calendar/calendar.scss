@@ -22,6 +22,9 @@
 				&:hover {
 					background-color: vars.$secondary-bg;
 					cursor: pointer;
+					transform: translateY(-10px); // Makes the card lift slightly
+					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Adds a shadow effect
+					transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition
 					h4 {
 						color: vars.$primary-bg;
 					}
@@ -69,7 +72,7 @@
 					opacity: 0.9;
 					color: vars.$primary-bg;
 					transition: all 0.4s ease-in-out; // Smooth transition
-					width: 60px; // Slightly larger initial size
+					width: 60px;
 					height: 60px;
 					border-radius: 4px 0 4px 0; // Default square shape
 					clip-path: none; // Initially no special shape
@@ -80,8 +83,8 @@
 					font-size: 0.8rem;
 					position: absolute;
 					top: 10px;
-					left: 10px; // Adjust as needed for positioning
-					z-index: 1; // Ensure it stays on top of other elements
+					left: 10px;
+					z-index: 1;
 				}
 			}
 		}
