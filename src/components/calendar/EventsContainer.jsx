@@ -16,6 +16,7 @@ export default function EventsContainer() {
 		setSingleEventId 
 	} = useContext(GlobalContext);
 
+	//TODO make all date/time related functions into util component
 	// Get the abbreviated name of the month and localize it
 	const getMonthName = (datestring) => {
 		// Check if the datestring is a valid string

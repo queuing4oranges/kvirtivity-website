@@ -108,14 +108,13 @@ export default function SingleEventContainer() {
 	return (
 		<div
 			key={date}
-			className='w-100 h-100 d-flex flex-column m-0 p-0'
+			className='h-100 d-flex flex-column m-0 p-0'
 		>
-			{/* TODO add to calendar button */}
 			{/* TODO sign up button for speed dating etc. */}
-			<Row className='w-100 g-0 d-flex justify-content-between'>
+			<Row className='w-100 g-0 d-flex justify-content-between position-relative'>
 				<Col md={5} className='h-100'>
 					{name && <Row className='mb-4 w-100'>
-						<Col><h4>{name}</h4></Col>
+						<Col><h2>{name}</h2></Col>
 					</Row>
 					}
 					{/* TODO make date readable */}
@@ -187,16 +186,7 @@ export default function SingleEventContainer() {
 						<i className='bi bi-apple' />
 					</Button>
 				</Col>
-				<Col md={5} className='h-100 position-relative'>
-					<Button
-						outline
-						color='secondary'
-						title={t('Zavřít')}
-						className='event-close-btn position-absolute top-0 end-0 p-0 zindex-3'
-						onClick={() => setShowSingleEvent(!showSingleEvent)}
-					>
-						<i className='bi bi-x-lg fs-2 fw-5' />
-					</Button>
+				<Col md={5} className='h-100 d-flex justify-content-end'>
 					<Row>
 						<img
 							/* TODO make a fallback picture */
