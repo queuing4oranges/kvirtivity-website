@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Card, CardImg, CardBody } from 'reactstrap';
 
 import { API_BASE_URL } from '../../api';
@@ -10,6 +11,7 @@ import './eventscontainer.scss';
 //TODO make alternative image if image is broken or missing
 
 export default function EventsContainer() {
+	const { t } = useTranslation();
 	const { events,
 		showSingleEvent, setShowSingleEvent,
 		setSingleEventId 
@@ -32,7 +34,7 @@ export default function EventsContainer() {
 							className='w-100 h-100 object-cover rounded-top'
 						/>
 						<div className='date-square position-absolute top-0 start-0 p-2  bg-opacity-75 text-center'>
-							<span className='date-square-month d-block fw-bold text-uppercase'>{getMonthName(event.date)}</span>
+							<span className='date-square-month d-block fw-bold text-uppercase'>{getMonthName(event.date, t)}</span>
 							<span className='date-square-day d-block fw-bold'>{getDay(event.date)}</span>
 						</div>
 					</div>

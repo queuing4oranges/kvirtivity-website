@@ -6,18 +6,19 @@ import './languageswitcher.scss';
 // Component to toggle between languages
 export default function LanguageSwitcher() {
 	const { i18n } = useTranslation();
-	const [language, setLanguage] = useState('cz');
+	const [language, setLanguage] = useState(i18n.language || 'cz');
 	
 	// Set initial language to Czech if not already set
 	useEffect(() => {
 		if (i18n.language !== language) {
 			i18n.changeLanguage(language);
 		}
-	},[language, i18n])
+	},[language, i18n]);
 
-	const changeLanguage = (lang) => {
-		setLanguage(lang);
-		i18n.changeLanguage(lang);
+	const changeLanguage = () => {
+		const newLanguage = language === 'cz' ? 'en' : 'cz';
+		setLanguage(newLanguage);
+		i18n.changeLanguage(newLanguage);
 	};
 	
 	return (
@@ -27,7 +28,7 @@ export default function LanguageSwitcher() {
 				className='check-toggle check-toggle-round-flat'
 				type='checkbox'
 				checked={language === 'en'}
-				onChange={() => changeLanguage(language === 'cz' ? 'en' : 'cz')}
+				onChange={changeLanguage}
 			/>
 			<label htmlFor='language-toggle'/>
 			<span className='on'>CZ</span>

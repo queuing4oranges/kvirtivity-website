@@ -17,6 +17,10 @@ i18n
 		interpolation: {
 			escapeValue: false, // React already escapes values to prevent XSS
 		},
+		detection: {
+			order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+			caches: ['localStorage', 'cookie'],
+		},
 	});
 
 export default i18n;

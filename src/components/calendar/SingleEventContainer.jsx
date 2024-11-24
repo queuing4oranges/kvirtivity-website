@@ -6,6 +6,7 @@ import { Card, Row, Col, Button } from 'reactstrap';
 
 import { GlobalContext } from '../../utils/GlobalContextProvider';
 import { API_BASE_URL } from '../../api';
+import { formatDateWithTranslation } from '../../utils/dateConverter';
 
 import './singleeventcontainer.scss';
 
@@ -120,7 +121,7 @@ export default function SingleEventContainer() {
 					{/* TODO make date readable */}
 					{date && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-calendar2-heart'/></Col>
-						<Col><p>{date}</p></Col>
+						<Col><p>{formatDateWithTranslation(date)}</p></Col>
 					</Row>
 					}
 					{time && <Row className='w-100'>
