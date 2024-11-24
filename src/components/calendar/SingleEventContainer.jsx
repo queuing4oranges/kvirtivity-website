@@ -101,7 +101,6 @@ export default function SingleEventContainer() {
 						<Col><h2>{name}</h2></Col>
 					</Row>
 					}
-					{/* TODO make date readable */}
 					{date && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-calendar2-heart'/></Col>
 						<Col><p>{formatDateWithTranslation(date)}</p></Col>
@@ -117,6 +116,7 @@ export default function SingleEventContainer() {
 						<Col><p>{locationName}</p></Col>
 					</Row>
 					}
+					{/* TODO make link!! */}
 					{website && <Row className='w-100'>
 						<Col md={1}><i className='bi bi-globe'/></Col>
 						<Col><p>{website}</p></Col>
