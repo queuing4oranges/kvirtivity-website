@@ -3,14 +3,13 @@
 	"Galerie": "Gallery",
 	"O Nás": "About us",
 	"Kontakt": "Contact",
-
 	"Zavřít": "Close",
 
 	"Events": {
-    "Přihlášeni": "Sign up",
-    "Přidat do Kalendáře Google": "Add to Google calendar",
-    "Přidat do Kalendáře Apple": "Add to Apple calendar"
-  },
+		"Přihlášeni": "Sign up",
+		"Přidat do Kalendáře Google": "Add to Google calendar",
+		"Přidat do Kalendáře Apple": "Add to Apple calendar"
+	},
 
 	"Months": {
 		"Led": "Jan",
@@ -25,5 +24,11 @@
 		"Říj": "Oct",
 		"Lis": "Nov",
 		"Pro": "Dec"
-  }
+	},
+
+	"SingleEvent": {
+		"Nebyl nalezen žádný událost.": "No event found.",
+		"Prosím, vraťte se zpět a vyberte událost.": "Please go back and select an event.",
+		"Zpět na události.": "Back to events."
+	}
 }

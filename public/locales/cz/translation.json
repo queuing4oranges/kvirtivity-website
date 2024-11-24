@@ -3,7 +3,6 @@
 	"Galerie": "Galerie",
 	"O Nás": "O Nás",
 	"Kontakt": "Kontakt",
-
 	"Zavřít": "Zavřít",
 
 	"Events": {
@@ -12,18 +11,24 @@
 		"Přidat do Kalendáře Apple": "Přidat do Kalendáře Apple"
 	},
 
-  "Months": {
-	"Led": "Led",
-	"Úno": "Úno",
-	"Bře": "Bře",
-	"Dub": "Dub",
-	"Kvě": "Kvě",
-	"Čvn": "Čvn",
-	"Čvc": "Čvc",
-	"Srp": "Srp",
-	"Zář": "Zář",
-	"Říj": "Říj",
-	"Lis": "Lis",
-	"Pro": "Pro"
-  }
+	"Months": {
+		"Led": "Led",
+		"Úno": "Úno",
+		"Bře": "Bře",
+		"Dub": "Dub",
+		"Kvě": "Kvě",
+		"Čvn": "Čvn",
+		"Čvc": "Čvc",
+		"Srp": "Srp",
+		"Zář": "Zář",
+		"Říj": "Říj",
+		"Lis": "Lis",
+		"Pro": "Pro"
+	},
+
+	"SingleEvent": {
+		"Nebyl nalezen žádný událost.": "Nebyl nalezen žádný událost.",
+		"Prosím, vraťte se zpět a vyberte událost.": "Prosím, vraťte se zpět a vyberte událost.",
+		"Zpět na události.": "Zpět na události."
+	}
 }

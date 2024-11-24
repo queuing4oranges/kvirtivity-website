@@ -2,24 +2,25 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 import moment from 'moment-timezone';
 
-import { Card, Row, Col, Button } from 'reactstrap';
+import { Row, Col, Button } from 'reactstrap';
 
 import { GlobalContext } from '../../utils/GlobalContextProvider';
 import { API_BASE_URL } from '../../api';
 import { formatDateWithTranslation } from '../../utils/dateConverter';
+import NoEventCard from './NoEventCard.jsx';
 
 import './singleeventcontainer.scss';
 
 export default function SingleEventContainer() {
 	const { t } = useTranslation();
-	const { events, showSingleEvent, singleEventId, setShowSingleEvent } = useContext(GlobalContext);
+	const { events, singleEventId } = useContext(GlobalContext);
 
 	// Find selected event in events array
 	const selectedEvent = events.find((event) => event.id === singleEventId);
 
 	// Destructure information from events
 	const {
-		name, description, //TODO consider RTE for description to get formatted text
+		name, description,
 		date, time,
 		price, capacity, latitude, longitude, signup,
 		event_type: typeOfEvent,
@@ -29,6 +30,7 @@ export default function SingleEventContainer() {
 		image_path: image
 	} = selectedEvent;
 	
+	//TODO Move to utils
 	// Create a calender event for Google user
 	const handleGoogleCalendar = () => {		
 		const startTime = moment.tz(`${date}T${time}`, 'Europe/Paris');
@@ -43,6 +45,7 @@ export default function SingleEventContainer() {
 		window.open(googleCalendarUrl, '_blank');
 	}
 	
+	//TODO Move to utils
 	// Create a calender event for Apple user
 	const handleAppleCalendar = () => {
 		const startTime = moment.tz(`${date}T${time}`, 'Europe/Paris');
@@ -82,35 +85,15 @@ export default function SingleEventContainer() {
 		// Remove the link from the document
 		document.body.removeChild(link);
 	};
-	
-	// Handle the case when no event is found
-	if (!selectedEvent) {
-		return (
-			// TODO show some kind of 404
-			// TODO translate text and button
-			// TODO styling of card
-			<Col md='4'>
-				<Card className='p-5 d-flex flex-column justify-content-center align-items-center'>
-					<span><p>No event found :(</p></span>
-					<span><p>Please go back and select an event</p></span>
-					<span className='mt-4'>
-						<Button
-							color='info'
-							onClick={() => setShowSingleEvent(!showSingleEvent)}
-						>
-							Back to events
-						</Button>
-					</span>
-				</Card>
-			</Col>
-		)
-	}
-	
+
 	return (
 		<div
 			key={date}
 			className='h-100 d-flex flex-column m-0 p-0'
 		>
+		{selectedEvent
+			? <NoEventCard />
+			: <>
 			{/* TODO sign up button for speed dating etc. */}
 			<Row className='w-100 g-0 d-flex justify-content-between position-relative'>
 				<Col md={5} className='h-100'>
@@ -223,6 +206,8 @@ export default function SingleEventContainer() {
 					/>
 				</div>
 			</Row>
+			</>
+		}
 		</div>
 	);
 }

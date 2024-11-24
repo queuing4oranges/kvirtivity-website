@@ -15,7 +15,7 @@
 }
 
 :root {
-	// font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	height: 100%;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -40,7 +40,7 @@ body, html {
 	padding: 0;
 }
 
-html, body, :root {
+html, body, :root, #root {
 	height: 100%;
 	width: 100%;
 	margin: 0;
