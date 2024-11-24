@@ -91,7 +91,7 @@ export default function SingleEventContainer() {
 			key={date}
 			className='h-100 d-flex flex-column m-0 p-0'
 		>
-		{selectedEvent
+		{!selectedEvent
 			? <NoEventCard />
 			: <>
 			{/* TODO sign up button for speed dating etc. */}
