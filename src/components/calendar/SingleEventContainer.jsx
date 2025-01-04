@@ -88,25 +88,25 @@ export default function SingleEventContainer() {
 	};
 //TODO align quotes to all single quotes!
 	return (
-	<div key={date} className="h-100 d-flex flex-column m-0 p-0">
+	<div key={date} className='h-100 d-flex flex-column m-0 p-0'>
 		{!selectedEvent ? (
 			<NoEventCard />
 		) : (
 			<>
 				{/* TODO sign up button for speed dating etc. */}
-				<Row className="w-100 g-0 d-flex justify-content-between position-relative">
-					<Col md={5} className="h-100">
+				<Row className='w-100 g-0 d-flex justify-content-between position-relative'>
+					<Col md={5} className='h-100'>
 					{name && (
-						<Row className="mb-4 w-100">
+						<Row className='mb-4 w-100'>
 						<Col>
 							<h2>{name}</h2>
 						</Col>
 						</Row>
 					)}
 					{date && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-calendar2-heart" />
+							<i className='bi bi-calendar2-heart' />
 						</Col>
 						<Col>
 							<p>{formatDateWithTranslation(date)}</p>
@@ -114,9 +114,9 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{time && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-clock" />
+							<i className='bi bi-clock' />
 						</Col>
 						<Col>
 							<p>{time}</p>
@@ -124,9 +124,9 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{locationName && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-geo-alt" />
+							<i className='bi bi-geo-alt' />
 						</Col>
 						<Col>
 							<p>{locationName}</p>
@@ -134,16 +134,16 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{website && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-globe" />
+							<i className='bi bi-globe' />
 						</Col>
 						<Col>
 							<a
 								href={website}
-								target="_blank"
-								rel="noopener noreferer"
-								className="text-decoration-none"
+								target='_blank'
+								rel='noopener noreferer'
+								className='text-decoration-none'
 							>
 								<p>{website}</p>
 							</a>
@@ -151,9 +151,9 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{address && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-map" />
+							<i className='bi bi-map' />
 						</Col>
 						<Col>
 							<p>{address}</p>
@@ -161,9 +161,9 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{price != null && price !== 0 && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-cash-coin" />
+							<i className='bi bi-cash-coin' />
 						</Col>
 						<Col>
 							<p>{price}</p>
@@ -171,19 +171,19 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{capacity != null && capacity !== 0 && (
-						<Row className="w-100">
+						<Row className='w-100'>
 						<Col md={1}>
-							<i className="bi bi-people" />
+							<i className='bi bi-people' />
 						</Col>
 						<Col>
 							<p>{capacity}</p>
 						</Col>
 						</Row>
 					)}
-					{(description != null && description !== "") && (
-						<Row className="w-100">
+					{(description != null && description !== '') && (
+						<Row className='w-100'>
 							<Col md={1}>
-								<i className="bi bi-info-square" />
+								<i className='bi bi-info-square' />
 							</Col>
 							<Col>
 								<p>{description}</p>
@@ -191,13 +191,13 @@ export default function SingleEventContainer() {
 						</Row>
 					)}
 					{(signup != null && signup === 1) && (
-						<Row className="">
-						<Col md={6} className="">
+						<Row className=''>
+						<Col md={6} className=''>
 							<CustomButton
-								buttonTitle={t("Events.Přihlášeni")}
-								name={t("Events.Přihlášeni")}
-								color={"info"}
-								iconName="bi bi-person-plus"
+								buttonTitle={t('Events.Přihlášeni')}
+								name={t('Events.Přihlášeni')}
+								color={'info'}
+								iconName='bi bi-person-plus'
 							/>
 						</Col>
 						</Row>
@@ -205,56 +205,56 @@ export default function SingleEventContainer() {
 				</Col>
 				<Col
 					md={2}
-					className="add-to-calendar-button d-flex flex-column align-items-center"
+					className='add-to-calendar-button d-flex flex-column align-items-center'
 				>
 					<Button
-						color="info"
-						title={t("Events.Přidat do Kalendáře Google")}
+						color='info'
+						title={t('Events.Přidat do Kalendáře Google')}
 						onClick={() => handleGoogleCalendar()}
 					>
-						<i className="bi bi-google" />
+						<i className='bi bi-google' />
 					</Button>
 					<Button
-						color="info"
-						title={t("Events.Přidat do Kalendáře Apple")}
+						color='info'
+						title={t('Events.Přidat do Kalendáře Apple')}
 						onClick={() => handleAppleCalendar()}
 					>
-						<i className="bi bi-apple" />
+						<i className='bi bi-apple' />
 					</Button>
 				</Col>
-				<Col md={5} className="h-100 d-flex justify-content-end">
+				<Col md={5} className='h-100 d-flex justify-content-end'>
 					<Row>
 						<img
 							/* TODO make a fallback picture */
 							src={`${API_BASE_URL}/events/images/${image}`}
 							alt={name}
-							loading="eager"
-							className="single-event-image"
+							loading='eager'
+							className='single-event-image'
 						/>
 					</Row>
 				</Col>
 				</Row>
 
 				{/* TODO make below separate component */}
-				<Row md="12" className="w-100 g-0 d-flex justify-content-center mt-4">
+				<Row md='12' className='w-100 g-0 d-flex justify-content-center mt-4'>
 					<div
-						className="w-100 h-100 d-flex position-relative"
+						className='w-100 h-100 d-flex position-relative'
 						onClick={() => {
 							// Open Google Maps in a new tab with the specified location
 							const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
-							window.open(url, "_blank");
+							window.open(url, '_blank');
 						}}
 					>
 						<iframe
-							id="iframeId"
-							height="300rem"
-							width="100%"
+							id='iframeId'
+							height='300rem'
+							width='100%'
 							src={`https://maps.google.com/maps?q=${latitude},${longitude}&hl=es;&output=embed`}
 						/>
 						{/* Transparent overlay to capture clicks */}
 						<span
-							className="position-absolute top-0 left-0 w-100 h-100 zindex-1"
-							style={{ background: "transparent" }}
+							className='position-absolute top-0 left-0 w-100 h-100 zindex-1'
+							style={{ background: 'transparent' }}
 						/>
 					</div>
 				</Row>
