@@ -10,6 +10,7 @@ import { formatDateWithTranslation } from '../../utils/dateConverter';
 import NoEventCard from './NoEventCard.jsx';
 
 import './singleeventcontainer.scss';
+import CustomButton from '../../includes/CustomButton.jsx';
 
 export default function SingleEventContainer() {
 	const { t } = useTranslation();
@@ -143,13 +144,14 @@ export default function SingleEventContainer() {
 						<Col><p>{description}</p></Col>
 					</Row>
 					}
-					{signup && (signup === 1) && <Row className='mt-5'>
-						{/* TODO make a reusable button here */}
+					{signup && (signup === 1) && <Row className=''>
 						<Col md={6} className=''>
-							<Button>
-								<i className='bi bi-person-plus me-3'/>
-								{t('Events.Přihlášeni')}
-							</Button>
+							<CustomButton
+								buttonTitle={t('Events.Přihlášeni')}
+								name={t('Events.Přihlášeni')}
+								color={'info'}
+								iconName='bi bi-person-plus'
+							/>
 						</Col>
 					</Row>
 					}

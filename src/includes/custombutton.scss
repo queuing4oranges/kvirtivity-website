@@ -1,0 +1,12 @@
+@use '../../src/variables.scss' as vars;
+
+.custom-button {
+	margin-top: 1rem;
+	background-color: vars.$title-color;
+	color: vars.$primary-bg;
+	
+	&:hover {
+		background-color: vars.$text-color;
+	}
+}
+
