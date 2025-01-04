@@ -8,9 +8,9 @@ import { GlobalContext } from '../../utils/GlobalContextProvider';
 import { API_BASE_URL } from '../../api';
 import { formatDateWithTranslation } from '../../utils/dateConverter';
 import NoEventCard from './NoEventCard.jsx';
+import CustomButton from '../../includes/CustomButton.jsx';
 
 import './singleeventcontainer.scss';
-import CustomButton from '../../includes/CustomButton.jsx';
 
 export default function SingleEventContainer() {
 	const { t } = useTranslation();

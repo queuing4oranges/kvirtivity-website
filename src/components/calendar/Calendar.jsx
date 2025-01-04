@@ -36,12 +36,12 @@ function Calendar() {
 	};
 	
 	return (
-		<Container fluid className='min-vh-100 p-5 calendar-container'>
-			<Row><h1>{t('Kalendář')}</h1></Row>
+		<Container fluid className='min-vh-100 p-5 calendar-container d-flex'>
+			<Row style={{ marginTop: '3rem'}}><h1>{t('Kalendář')}</h1></Row>
 			<div className='w-100 d-flex events-wrapper flex-column align-items-center'>
-				<Row>{/* TODO there should be some filtering for the events */}</Row>
 				{(showSingleEvent === false)
-					? <> <Row className='w-75' style={{ height: '3rem' }}></Row>
+					? <>
+					<Row className='w-75' style={{ height: '3rem' }}></Row>
 						<Row className='events-container'>
 							<EventsContainer />
 						</Row>
