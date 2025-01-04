@@ -25,7 +25,7 @@
 					background-color: vars.$secondary-bg;
 					cursor: pointer;
 					transform: translateY(-10px); // Makes the card lift slightly
-					box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Adds a shadow effect
+					box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 					transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition
 					h4 {
 						color: vars.$primary-bg;
