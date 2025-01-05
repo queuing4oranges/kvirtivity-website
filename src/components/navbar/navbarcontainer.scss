@@ -6,7 +6,10 @@
 	.nav-link {
 		color: vars.$text-color;
 		&:hover {
-			color: vars.$secondary-bg;
+			color: vars.$primary-accent;
+		}
+		&.active{
+			color: vars.$primary-accent;
 		}
 	}
 }

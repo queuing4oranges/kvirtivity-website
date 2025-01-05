@@ -1,16 +1,16 @@
 @use '../../../src/variables.scss' as vars;
 
 .single-event-container {
-	background-color: vars.$secondary-bg;
-	border: 2px solid vars.$title-color;
+	background-color: vars.$primary-bg;
 	border-radius: 0.5rem;
+	box-shadow: vars.$primary-accent 0px 4px 12px;
 
 	h2 {
-		color: vars.$title-color;
+		color: vars.$primary-accent;
 	}
 
 	p, i{
-		color: vars.$primary-bg;
+		color: vars.$text-color;
 		font-weight: 600;
 	}
 }
@@ -20,8 +20,11 @@
 	cursor: pointer;
 }
 
-span.event-close-btn svg polygon:hover {
-	fill: vars.$text-color;
+span.event-close-btn svg polygon {
+	fill: vars.$primary-accent;
+		&:hover {
+			fill: vars.$text-color;
+		}
 }
 
 .single-event-image {
@@ -34,8 +37,11 @@ span.event-close-btn svg polygon:hover {
 	.btn {
 		border-radius: 50%;
 		margin-bottom: 1rem;
+		background-color: vars.$secondary-bg;
+		border: unset;
 	}
+
 	.btn:hover {
-		color: red;
+		background-color: vars.$primary-accent;
 	}
 }

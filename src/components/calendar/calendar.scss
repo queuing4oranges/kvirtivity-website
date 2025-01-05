@@ -4,7 +4,7 @@
 	background-color: vars.$primary-bg;
 
 	h1 {
-		color: vars.$title-color;
+		color: vars.$text-color;
 	}
 
 	.events-wrapper {
@@ -15,41 +15,45 @@
 			.card {
 				width: 300px;
 				height: 300px;
-				border: 2px solid vars.$title-color;
+				border: 2px solid vars.$primary-accent;
 				position: relative;
 				overflow: visible !important;
-				background-color: vars.$text-color;
+				background-color: vars.$primary-bg;
 				--bs-card-border-color: none !important;
 				box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 				&:hover {
-					background-color: vars.$secondary-bg;
+					background-color: vars.$primary-accent;
 					cursor: pointer;
 					transform: translateY(-10px); // Makes the card lift slightly
 					box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 					transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition
 					h4 {
-						color: vars.$primary-bg;
+						color: vars.$secondary-accent;
 					}
 					p {
-						color: vars.$title-color !important;
+						color: vars.$secondary-accent !important;
+					}
+					.date-square {
+						background-color: vars.$secondary-accent;
+						color: vars.$primary-accent;
 					}
 				}
 
 				h4 {
-					color: vars.$title-color;
-					font-family: vars.$primary-font;
-					font-weight: 600;
+					color: vars.$text-color;
+					font-family: vars.$accent-font;
+					font-weight: 400;
 				}
 
 				p {
-					color: vars.$primary-bg !important;
+					color: vars.$text-color !important;
 					font-weight: 600;
 				}
 
 				.date-square {
-					background-color: vars.$accent-color;
+					background-color: vars.$primary-bg;
 					opacity: 0.9;
-					color: vars.$primary-bg;
+					color: vars.$text-color;
 					transition: all 0.4s ease-in-out; // Smooth transition
 					width: 60px;
 					height: 60px;

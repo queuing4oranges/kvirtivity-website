@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 import {
 	Navbar, Nav, NavItem, NavLink,
@@ -16,6 +17,7 @@ import './navbarcontainer.scss';
 export default function NavbarContainer() {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const { t } = useTranslation();
+	const location = useLocation();
 	
 	useEffect(()=>{
 		const handleResize = () => {
@@ -51,7 +53,12 @@ export default function NavbarContainer() {
 							<Nav>
 								{navLinks && navLinks.map((link, idx) => (
 									<NavItem key={idx}>
-										<NavLink href={link.to}>{t(link.name)}</NavLink>
+										<NavLink
+											href={link.to}
+											className={location.pathname === link.to ? 'active' : ''}
+										>
+											{t(link.name)}
+										</NavLink>
 									</NavItem>
 								))}
 							</Nav>

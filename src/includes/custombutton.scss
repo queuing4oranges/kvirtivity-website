@@ -2,11 +2,12 @@
 
 .custom-button {
 	margin-top: 1rem;
-	background-color: vars.$title-color;
-	color: vars.$primary-bg;
+	background-color: vars.$secondary-bg !important;
+	color: vars.$text-color !important;
+	border: unset !important;
 	
 	&:hover {
-		background-color: vars.$text-color;
+		background-color: vars.$primary-accent !important;
 	}
 }
 

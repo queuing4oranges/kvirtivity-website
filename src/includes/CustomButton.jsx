@@ -6,7 +6,6 @@ import './custombutton.scss';
 export default function CustomButton({
 	buttonTitle = '', // Hover title for button
 	name = '', // Title of the button
-	color = '', // Bootstrap button color (for example 'success', 'danger')
 	onClick = null,
 	iconName = '', // Name of the bootstrap icon (for example 'bi bi-clock')
 	iconClass = '' // Possiblity to add custom styling
@@ -15,7 +14,6 @@ export default function CustomButton({
 		<span>
 			<Button
 				title={buttonTitle}
-				color={color}
 				onClick={onClick}
 				className={`custom-button ${iconClass}`}
 			>

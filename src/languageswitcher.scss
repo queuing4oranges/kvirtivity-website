@@ -14,23 +14,23 @@
 }
 
 input.check-toggle-round-flat:checked ~ .off {
-	color: vars.$primary-bg;
+	color: vars.$primary-accent;
 }
 
 input.check-toggle-round-flat:checked ~ .on {
-	color: vars.$primary-bg;
+	color: vars.$primary-accent;
 }
 
 .switch > span.on {
 	left: 0;
 	padding-left: 2px;
-	color: vars.$primary-bg;
+	color: vars.$primary-accent;
 }
 
 .switch > span.off {
 	right: 0;
 	padding-right: 4px;
-	color: vars.$primary-bg;
+	color: vars.$primary-accent;
 }
 
 .check-toggle {
@@ -50,10 +50,10 @@ input.check-toggle-round-flat:checked ~ .on {
 }
 
 input.check-toggle-round-flat + label {
-	padding: 2px;
+	padding: 1px;
 	width: 97px;
 	height: 35px;
-	background-color: vars.$text-color;
+	// background-color: vars.$primary-accent; // No border on toggle
 	-webkit-border-radius: 60px;
 	-moz-border-radius: 60px;
 	-ms-border-radius: 60px;
@@ -71,7 +71,7 @@ input.check-toggle-round-flat + label:before {
 	left: 2px;
 	bottom: 2px;
 	right: 2px;
-	background-color: vars.$text-color;
+	background-color: vars.$primary-bg;
 	-webkit--moz-border-radius: 60px;
 	-ms-border-radius: 60px;
 	-o-border-radius: 60px;
@@ -82,7 +82,7 @@ input.check-toggle-round-flat + label:after {
 	left: 4px;
 	bottom: 4px;
 	width: 48px;
-	background-color: vars.$title-color;
+	background-color: vars.$secondary-accent;
 	-webkit-border-radius: 52px;
 	-moz-border-radius: 52px;
 	-ms-border-radius: 52px;

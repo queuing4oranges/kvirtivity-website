@@ -50,7 +50,7 @@ function Calendar() {
 						<Row className='w-75' style={{height: '3rem' }}>
 							<span
 								title={t('Zavřít')}
-								className='event-close-btn d-flex justify-content-end'
+								className='event-close-btn d-flex justify-content-end pe-0'
 								onClick={() => setShowSingleEvent(!showSingleEvent)}
 							>
 								<Xicon width={30} height={30} color={'#fe00ec'}/>
