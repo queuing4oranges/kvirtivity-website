@@ -1,7 +1,7 @@
 export function FramePink() {
 	// Uses ids from letter 'a' to letter 'l'
 	return (
-		<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="346.86" height="236.974" viewBox="0 0 91.773 62.699">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="300" height="200" viewBox="0 0 91.773 62.699">
 			<defs>
 				<linearGradient id="d">
 					<stop offset="0" style={{ stopColor: "#ff59b3", stopOpacity: 1 }}/>

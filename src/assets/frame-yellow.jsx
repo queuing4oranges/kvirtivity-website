@@ -3,8 +3,8 @@ export function FrameYellow() {
 		<svg
 		xmlns="http://www.w3.org/2000/svg"
 		xmlnsXlink="http://www.w3.org/1999/xlink"
-		width={301}
-		height={201}
+		width={300}
+		height={200}
 		viewBox="0 0 79.64 53.181"
 		>
 			<defs>
