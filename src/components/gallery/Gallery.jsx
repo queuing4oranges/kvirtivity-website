@@ -12,6 +12,9 @@ export default function Gallery() {
 	const { t } = useTranslation();
 	const [images, setImages] = useState();
 
+	// Create array of frames
+	const frames = [FrameBlue, FramePink, FrameYellow];
+
 	useEffect(() => {
 		getImages();
 	},[]);
@@ -28,9 +31,6 @@ export default function Gallery() {
 			console.error('Could not retrieve images');
 		}
 	};
-	// <FramePink />
-	// <FrameBlue />
-	// <FrameYellow />
 
 	return (
 	<Container fluid className='min-vh-100 p-5 gallery-container d-flex flex-column'>
@@ -38,13 +38,15 @@ export default function Gallery() {
 			<h1>{t('Galerie')}</h1>
 		</Row>
 		<Row>
-			{images && images.map((img, idx) => (
+			{images && images.map((img, idx) =>  {
+				const RandomFrame = frames[Math.floor(Math.random() * frames.length)]
+				return (
 				<div key={idx} className='position-relative p-0'>
 					<img src={`${API_BASE_URL}/images/images/${img?.filename}`} style={{ width: "300px", height: "200px", objectFit: "cover" }} />
-					<span className='position-absolute top-0 start-0 w-100 h-100'><FrameBlue /></span>
+					<span className='position-absolute top-0 start-0 w-100 h-100'><RandomFrame /></span>
 					<br /> <br /><br /><br /><br /><br /><br />
 				</div>
-			))}
+			)})}
 		</Row>
 	</Container>
 	);

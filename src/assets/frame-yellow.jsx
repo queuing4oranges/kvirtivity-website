@@ -7,108 +7,6 @@ export function FrameYellow() {
 		height={200}
 		viewBox="0 0 79.64 53.181"
 		>
-			<defs>
-				<linearGradient id="v">
-				<stop
-					offset={0}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 1,
-					}}
-				/>
-				<stop
-					offset={1}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 0,
-					}}
-				/>
-				</linearGradient>
-				<linearGradient id="u">
-				<stop
-					offset={0}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 1,
-					}}
-				/>
-				<stop
-					offset={1}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 0,
-					}}
-				/>
-				</linearGradient>
-				<linearGradient id="t">
-				<stop
-					offset={0}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 1,
-					}}
-				/>
-				<stop
-					offset={1}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 0,
-					}}
-				/>
-				</linearGradient>
-				<linearGradient id="s">
-				<stop
-					offset={0}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 1,
-					}}
-				/>
-				<stop
-					offset={1}
-					style={{
-					stopColor: "#ff3",
-					stopOpacity: 0,
-					}}
-				/>
-				</linearGradient>
-				<linearGradient
-				xlinkHref="#s"
-				id="z"
-				x1={318.481}
-				x2={341.483}
-				y1={542.572}
-				y2={542.572}
-				gradientUnits="userSpaceOnUse"
-				/>
-				<linearGradient
-				xlinkHref="#t"
-				id="w"
-				x1={464.948}
-				x2={468.268}
-				y1={436.362}
-				y2={479.822}
-				gradientUnits="userSpaceOnUse"
-				/>
-				<linearGradient
-				xlinkHref="#u"
-				id="x"
-				x1={601.877}
-				x2={620.729}
-				y1={542.767}
-				y2={542.477}
-				gradientUnits="userSpaceOnUse"
-				/>
-				<linearGradient
-				xlinkHref="#v"
-				id="y"
-				x1={463.212}
-				x2={464.645}
-				y1={616.148}
-				y2={659.276}
-				gradientUnits="userSpaceOnUse"
-				/>
-			</defs>
 			<path
 				d="M84.075 117.001h79.375v52.917H84.075z"
 				style={{
@@ -170,7 +68,7 @@ export function FrameYellow() {
 			<path
 				d="M494.948 460.438c-9.747-.263-24.044-.887-33.949-1.483-14.9-.896-38.712-1.283-58.822-.956-32.927.535-46.912.34-59.592-.834-4.438-.411-4.681-.473-5.714-1.45-1.407-1.333-6.63-4.879-10.659-7.238-3.324-1.947-5.813-3.885-6.402-4.986-.339-.632 2.043-.642 148.084-.642h148.429l-1.085 1.596c-1.587 2.337-5.924 6.545-10.712 10.395-2.31 1.858-4.49 3.701-4.842 4.096-.63.707-.827.719-11.932.727-6.211.004-20.066.227-30.788.495-16.568.415-51.196.571-62.016.28z"
 				style={{
-				fill: "url(#w)",
+				fill: "#FFFF33",
 				fillOpacity: 1,
 				fillRule: "evenodd",
 				stroke: "none",
@@ -184,7 +82,7 @@ export function FrameYellow() {
 			<path
 				d="M616.09 639.776c-.352-.394-2.166-1.742-4.032-2.997-3.953-2.659-5.286-4.083-8.036-8.586-1.11-1.817-2.698-4.141-3.53-5.166l-1.512-1.863.028-15.966c.016-8.781.213-18.84.438-22.352.681-10.625.832-24.76.398-37.276-.395-11.394-.378-12.312.48-26.757 1.451-24.441 1.5-45.465.13-55.403-.286-2.066-.256-2.592.183-3.262.288-.44 2.422-2.33 4.742-4.2 5.443-4.39 8.198-6.98 10.073-9.475l1.51-2.01v98.014c0 53.908-.051 98.015-.115 98.015s-.404-.322-.756-.716z"
 				style={{
-				fill: "url(#x)",
+				fill: "#FFFF33",
 				fillOpacity: 1,
 				fillRule: "evenodd",
 				stroke: "none",
@@ -198,7 +96,7 @@ export function FrameYellow() {
 			<path
 				d="M323.219 640.124c1.339-.856 4.998-4.224 9.68-8.908l7.526-7.53h6.927c7.387 0 12.58.368 17.145 1.215 2.36.439 3.367.461 6.15.137 1.83-.212 8.123-.439 13.984-.502 5.86-.064 13.151-.297 16.202-.518 6.981-.505 20.372-.534 25.881-.056 7.117.617 60.351.884 72.1.362 5.945-.264 19.257-.453 32.436-.46 12.294-.006 22.549-.137 22.788-.292.24-.155 6.901-.09 14.803.143 14.88.44 21.486.236 27.046-.835l2.285-.44 1.143 1.335c.629.735 2.14 2.972 3.36 4.972 2.908 4.773 4.599 6.594 8.52 9.179 1.786 1.177 3.535 2.462 3.887 2.857l.64.717H321.066Z"
 				style={{
-				fill: "url(#y)",
+				fill: "#FFFF33",
 				fillOpacity: 1,
 				fillRule: "evenodd",
 				stroke: "none",
@@ -212,7 +110,7 @@ export function FrameYellow() {
 			<path
 				d="M318.481 542.572v-98.255l1.644 1.584c.905.872 3.363 2.604 5.463 3.849 4.444 2.635 9.541 6.133 10.621 7.288l.754.806.055 26.367c.035 17.203-.153 35.012-.541 51.24-.85 35.55-.34 55.199 2.116 81.4l.572 6.107-7.737 7.677c-5.639 5.596-8.327 8.02-9.914 8.935-1.197.692-2.37 1.258-2.605 1.258-.345 0-.428-18.939-.428-98.256z"
 				style={{
-				fill: "url(#z)",
+				fill: "#FFFF33",
 				fillOpacity: 1,
 				fillRule: "evenodd",
 				stroke: "none",
