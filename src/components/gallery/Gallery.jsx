@@ -1,7 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container, Row } from 'reactstrap';
-import { FramePink } from '../../assets/frames';
+import { FramePink } from '../../assets/frame-pink';
+import { FrameBlue } from '../../assets/frame-blue';
+import { FrameYellow } from '../../assets/frame-yellow';
 
 import './gallery.scss';
 
@@ -12,6 +14,8 @@ export default function Gallery() {
 		<Row style={{ marginTop: '3rem' }}>
 			<h1>{t('Galerie')}</h1>
 			<FramePink />
+			<FrameBlue />
+			<FrameYellow />
 		</Row>
 	</Container>
 	);
