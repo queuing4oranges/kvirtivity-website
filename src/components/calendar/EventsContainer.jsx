@@ -31,9 +31,9 @@ export default function EventsContainer() {
 					<div className='event-image'>
 						<CardImg
 							src={`${API_BASE_URL}/events/images/${event.image_path}`}
-							className='w-100 h-100 object-cover rounded-top'
+							className='w-100 h-100 object-cover rounded-0'
 						/>
-						<div className='date-square position-absolute top-0 start-0 p-2  bg-opacity-75 text-center'>
+						<div className='date-square position-absolute top-0 start-0 p-2 bg-opacity-75 text-center'>
 							<span className='date-square-month d-block fw-bold text-uppercase'>{getMonthName(event.date, t)}</span>
 							<span className='date-square-day d-block fw-bold'>{getDay(event.date)}</span>
 						</div>

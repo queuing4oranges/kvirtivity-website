@@ -44,7 +44,6 @@ export default function NavbarContainer() {
 				<MobileNavbar />
 			) : (
 				<Container fluid className='navbar-container'>
-					{/* TODO style navbar in brand colors */}
 					<Navbar>
 						<Col md='3'>
 							<NavLink href={'/'}><KvirtivityLogo height={50} width={150}/></NavLink>
