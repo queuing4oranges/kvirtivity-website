@@ -4,6 +4,7 @@ import Calendar from './components/calendar/Calendar';
 import NavbarContainer from './components/navbar/NavbarContainer';
 import GlobalContextProvider from './utils/GlobalContextProvider';
 import Gallery from './components/gallery/Gallery';
+import About from './components/about/About';
 import './App.scss';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 						<Route exact path='/' element={<Home />} />
 						<Route path='/kalendar' element={<Calendar />} />
 						<Route path='/galerie' element={<Gallery />} />
+						<Route path='/o-nas' element={<About />} />
 					</Routes>
 				</BrowserRouter>
 			</GlobalContextProvider>
