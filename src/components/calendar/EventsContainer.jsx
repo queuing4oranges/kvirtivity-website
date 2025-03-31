@@ -22,7 +22,7 @@ export default function EventsContainer() {
 			{events && events.map((event, idx) => (
 				<Card
 					key={idx}
-					className='p-0 event-card rounded-2 overflow-hidden'
+					className='p-0 event-card rounded-0 overflow-hidden'
 					onClick={() => (
 						setSingleEventId(event.id),
 						setShowSingleEvent(!showSingleEvent)
