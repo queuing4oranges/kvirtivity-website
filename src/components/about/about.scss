@@ -1,0 +1,19 @@
+svg image {
+	filter: grayscale(100%);
+	transition: filter 0.3s ease;
+}
+svg .path-blue:hover ~ image[clip-path="url(#clip-blue)"],
+svg image[clip-path="url(#clip-blue)"]:hover, // Add hover effect for the image itself
+svg .path-pink:hover ~ image[clip-path="url(#clip-pink)"],
+svg image[clip-path="url(#clip-pink)"]:hover, // Add hover effect for the image itself
+svg .path-yellow:hover ~ image[clip-path="url(#clip-yellow)"],
+svg image[clip-path="url(#clip-yellow)"]:hover { // Add hover effect for the image itself
+	filter: grayscale(0%); // Restore the image's original colors on hover
+}
+svg
+.path-blue:hover,
+.path-pink:hover,
+.path-yellow:hover {
+	// opacity: 0.5 !important;
+	filter: blur(5px);
+}
