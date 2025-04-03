@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
 	Container, Row, Col, Card,
@@ -12,18 +12,39 @@ import './contact.scss';
 
 export default function Contact() {
 	const { t } = useTranslation();
+
+	useEffect(() => {
+		const icons = document.getElementsByClassName('bi');
+		const handleMouseEnter = (event) => {
+			event.target.classList.add('bounce-top');
+
+			setTimeout(() => {
+				event.target.classList.remove("bounce-top");
+			}, 500); // Adjust timing based on animation duration
+		};
+
+		for (let icon of icons) {
+			icon.addEventListener('mouseenter', handleMouseEnter);
+		}
+
+		return () => {
+			for (let icon of icons) {
+				icon.removeEventListener('mouseenter', handleMouseEnter);
+			}
+		}
+	}, []);
+
 	return (
 		<Container fluid className='h-100 p-5 contact-container d-flex justify-content-center align-items-center'>
-			<Row className='w-75 p-5' style={{ border: '2px solid blue'}}>
-				<Card className='contact-card-container border-0 d-flex flex-row'>
-					<Col md='6' style={{ border: '2px solid red' }}>
+			<Row className='w-75'>
+				<Card className='contact-card-container d-flex flex-row m-5 p-5'>
+					<Col md='6' className='socials-column'>
 						<div><SocialMedia /></div>
-						<div className='fs-1'>
-							<i className='bi bi-facebook' />
-							<i className='bi bi-instagram'/>
-							<i className='bi bi-envelope' />
+						<div className='contact-socials-icons-container d-flex justify-content-center'>
+							<i className='bi bi-facebook mx-3' title='Facebook' />
+							<i className='bi bi-instagram mx-3' title='Instagram' />
+							<i className='bi bi-envelope mx-3' title='Email'/>
 						</div>
-						{/* illustration and socials */}
 					</Col>
 					<Col md='6'>
 						<Form className='p-5'>
