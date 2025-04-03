@@ -30,5 +30,11 @@
 		"Nebyl nalezen žádný událost.": "No event found.",
 		"Prosím, vraťte se zpět a vyberte událost.": "Please go back and select an event.",
 		"Zpět na události.": "Back to events."
+	},
+
+	"ContactUs": {
+		"Jméno": "Name",
+		"Zpráva": "Message",
+		"Odeslat": "Send"
 	}
 }

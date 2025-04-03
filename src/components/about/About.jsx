@@ -25,30 +25,26 @@ export default function About() {
 	}
 
 	return (
-		<Container fluid className='min-vh-100 p-5 d-flex flex-column'>
+		<Container fluid className='min-vh-100 p-5 d-flex'>
 			<Row style={{ marginTop: '3rem' }}><h1>{t('O Nás')}</h1></Row>
-			<Row className='w-100'>
-				<Col md='5' className='d-flex'>
-					<Col md='6' className='p-5'>
-						<p>
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aenean placerat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus et lorem id felis nonummy placerat. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Etiam commodo dui eget wisi. Aenean vel massa quis mauris vehicula lacinia.
-						</p>
-					</Col>
-					<Col className='p-5 mt-5'>
-						{!activeText ?
-							<span className='h-100 mt-5'>
-								<h3>We are Kvirtivity</h3>
-							</span>
+			<Row style={{ marginTop: '3rem' }} className='about-us-container w-75 mx-auto'>
+				<Col md='4' className='d-flex flex-column justify-content-start p-5'>
+					{!activeText ?
+						<>
+							<strong>We are Kvŕtivity</strong>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Aenean placerat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Phasellus et lorem id felis nonummy placerat. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Etiam commodo dui eget wisi. Aenean vel massa quis mauris vehicula lacinia.
+							</p>
+						</>
 						:
-							<span>
-								<p>
-									<strong>Hi, I'm{activeText.name}</strong>
-								</p>
-								<p>{activeText.intro}</p>
-							</span>
-						}
+						<>
+							<p>
+								<strong>Hi, I'm{activeText.name}</strong>
+							</p>
+							<p>{activeText.intro}</p>
+						</>
+					}
 					</Col>
-				</Col>
 				<Col md='7' className='d-flex justify-content-center'>
 					<div className='d-flex align-items-start justify-content-end'>
 						<svg width='750' height='750' viewBox='120 120 720 720' fill='none' xmlns='http://www.w3.org/2000/svg'>

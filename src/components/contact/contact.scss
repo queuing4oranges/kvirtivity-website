@@ -1,0 +1,9 @@
+@use '../../../src/variables.scss' as vars;
+
+.contact-container {
+	background-image: url('/assets/kvir-contact-bg.svg');
+	
+	.contact-card-container {
+		background-color: vars.$primary-bg;
+	}
+}

@@ -30,5 +30,11 @@
 		"Nebyl nalezen žádný událost.": "Nebyl nalezen žádný událost.",
 		"Prosím, vraťte se zpět a vyberte událost.": "Prosím, vraťte se zpět a vyberte událost.",
 		"Zpět na události.": "Zpět na události."
+	},
+
+	"ContactUs": {
+		"Jméno": "Jméno",
+		"Zpráva": "Zpráva",
+		"Odeslat": "Odeslat"
 	}
 }
