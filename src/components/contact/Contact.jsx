@@ -35,9 +35,10 @@ export default function Contact() {
 	}, []);
 
 	return (
-		<Container fluid className='h-100 p-5 contact-container d-flex justify-content-center align-items-center'>
-			<Row className='w-75'>
-				<Card className='contact-card-container d-flex flex-row m-5 p-5'>
+		<Container fluid className='h-100 p-5 contact-container d-flex'>
+			<Row style={{ marginTop: '3rem' }}><h1>{t('Kontakt')}</h1></Row>
+			<Row className='contact-container w-75 m-auto' style={{ marginTop: '3rem' }}>
+				<Card className='contact-card-container d-flex flex-row p-5 h-75'>
 					<Col md='6' className='socials-column'>
 						<div><SocialMedia /></div>
 						<div className='contact-socials-icons-container d-flex justify-content-center'>
