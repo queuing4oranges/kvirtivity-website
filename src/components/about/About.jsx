@@ -9,7 +9,7 @@ import person2 from '../../assets/images/person2.png';
 import { aboutData } from './aboutData';
 
 import './about.scss';
-
+//TODO Make general text more prominent
 export default function About() {
 	const { t } = useTranslation();
 	const [activeText, setActiveText] = useState('');

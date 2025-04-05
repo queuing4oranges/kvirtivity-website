@@ -35,6 +35,7 @@
 	"ContactUs": {
 		"Jméno": "Jméno",
 		"Zpráva": "Zpráva",
-		"Odeslat": "Odeslat"
+		"Odeslat": "Odeslat",
+		"Povinné údaje": "Povinné údaje"
 	}
 }

@@ -9,6 +9,8 @@ import { getDay, getMonthName } from '../../utils/dateConverter';
 import './eventscontainer.scss';
 
 //TODO make alternative image if image is broken or missing
+//TODO Make empty page when no data is loading
+//TODO fix height of the card
 
 export default function EventsContainer() {
 	const { t } = useTranslation();

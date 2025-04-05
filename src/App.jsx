@@ -7,7 +7,7 @@ import Gallery from './components/gallery/Gallery';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import './App.scss';
-
+// TODO Create some tag with my name and github link
 function App() {
 	return (
 		<div className='h-100 w-100'>

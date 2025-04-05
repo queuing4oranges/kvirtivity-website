@@ -14,6 +14,7 @@ import Xicon from '../../assets/icons';
 import SingleEventContainer from './SingleEventContainer';
 // TODO Make spinner component for loading
 // TODO Make alert if it isnt possible to get events
+//TODO Make empty page when no data is loading
 
 function Calendar() {
 	const { t } = useTranslation();

@@ -10,6 +10,9 @@
 		.contact-socials-icons-container {
 			font-size: 4rem;
 			color: vars.$primary-accent;
+			i:hover{
+				color: vars.$secondary-bg;
+			}
 		}
 	}
 }
