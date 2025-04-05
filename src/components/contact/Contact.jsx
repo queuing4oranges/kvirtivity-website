@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser'
 import {
 	Container, Row, Col, Card,
 	Form, FormGroup, Label, FormFeedback,
@@ -10,14 +11,20 @@ import {
 import SocialMedia from '../../assets/SocialMedia.jsx';
 
 import './contact.scss';
-//TODO implement RHF
 //TODO add links to icons
 //TODO add animation to send button or a toast
 // TODO the send button needs fixed width to not change when changing language
 export default function Contact() {
 	const { t } = useTranslation();
 	const { register, handleSubmit, formState: { errors } } = useForm();
+	const contactForm = useRef();
 
+	// Set up emailjs
+	// const serviceId = import.meta.env.VITE_SERVICE_ID;
+	// const templateId = import.meta.env.VITE_TEMPLATE_ID;
+	// const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+	// Register the input fields
 	const userName = register('userName', { required: t('ContactUs.Povinné údaje') });
 	const email = register('email', { required: t('ContactUs.Povinné údaje') });
 	const message = register('message', { required: t('ContactUs.Povinné údaje') });
@@ -43,12 +50,23 @@ export default function Contact() {
 		}
 	}, []);
 
-	const sendContactForm = async (data) => {
-		console.log(data);
+	const sendContactForm = (values) => {
+console.log(values); //TODO remove this line
 		try {
-			// TODO implement sending data to the server
-		} catch {
-			// TODO handle error
+			const response = emailjs.sendForm(
+				serviceId,
+				templateId,
+				contactForm.current,
+				publicKey
+			);
+			if (response) {
+				console.log(response); //TODO use message from response ?
+				console.log('Email sent successfully');
+			}
+		} catch (error) {
+			console.error('Error sending email:', error);
+		} finally {
+			// TODO Add some kind of animation or toast
 		}
 	}
 
@@ -66,7 +84,7 @@ export default function Contact() {
 						</div>
 					</Col>
 					<Col md='6'>
-						<Form onSubmit={handleSubmit(sendContactForm)} className='p-5'>
+						<Form ref={contactForm} onSubmit={handleSubmit(sendContactForm)} className='p-5'>
 							<FormGroup>
 								<Label>{t('ContactUs.Jméno')}</Label>
 								<input
