@@ -30,7 +30,7 @@ export default function Contact() {
 	const message = register('message', { required: t('ContactUs.Povinné údaje') });
 
 	useEffect(() => {
-		const icons = document.getElementsByClassName('bi');
+		const icons = document.getElementsByClassName('a-icon');
 		const handleMouseEnter = (event) => {
 			event.target.classList.add('bounce-top');
 
@@ -79,7 +79,7 @@ console.log(values); //TODO remove this line
 						<div><SocialMedia /></div>
 						<div className='contact-socials-icons-container d-flex justify-content-center'>
 							<a
-								className='mx-3'
+								className='mx-3 a-icon'
 								title='Facebook'
 								href='https://www.facebook.com/kvirtivity'
 								target='_blank'
@@ -88,7 +88,7 @@ console.log(values); //TODO remove this line
 								<i className='bi bi-facebook' />
 							</a>
 							<a
-								className='mx-3'
+								className='mx-3 a-icon'
 								href='https://www.instagram.com/kvirtivity'
 								title='Instagram'
 								target='_blank'
@@ -97,8 +97,8 @@ console.log(values); //TODO remove this line
 								<i className='bi bi-instagram' />
 							</a>
 							<a
+								className='mx-3 a-icon'
 								href='mailto:info@kvirtivity.cz'
-								className='mx-3'
 								title='Email'
 								target='_blank'
 								rel='noopener noreferrer'
