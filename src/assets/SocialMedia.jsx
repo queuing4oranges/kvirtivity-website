@@ -1,6 +1,6 @@
 export default function SocialMedia() {
 	return (
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style={{width: "372px"}} xmlSpace="preserve" data-imageid="social-media-2-1" className="illustrations_image">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" style={{ width: "100%", maxWidth: "372px" }} xmlSpace="preserve" data-imageid="social-media-2-1" className="illustrations_image">
 			<g id="Instagram_Post_social-media-2-1">
 				<path style={{ fill: "#FFFFFF" }} d="M61.4,103.4l30.8,194.9h149.3l-30.8-194.9H61.4z"/>
 				<path style={{ fill: "#ff1493" }} d="M241.4,299H92.2c-0.3,0-0.6-0.3-0.7-0.6L60.7,103.5c-0.1-0.4,0.2-0.7,0.6-0.8c0,0,0.1,0,0.1,0h149.3&#10;&#9;&#9;c0.3,0,0.6,0.2,0.7,0.6l30.8,194.9C242.2,298.6,241.9,299,241.4,299C241.5,299,241.5,299,241.4,299L241.4,299z M92.8,297.6h147.9&#10;&#9;&#9;l-30.5-193.5H62.2L92.8,297.6z"/>
