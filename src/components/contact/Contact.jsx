@@ -36,7 +36,7 @@ export default function Contact() {
 
 			setTimeout(() => {
 				event.target.classList.remove('bounce-top');
-			}, 500); // Adjust timing based on animation duration
+			}, 500);
 		};
 
 		for (let icon of icons) {
@@ -78,9 +78,33 @@ console.log(values); //TODO remove this line
 					<Col md='6' className='socials-column'>
 						<div><SocialMedia /></div>
 						<div className='contact-socials-icons-container d-flex justify-content-center'>
-							<i className='bi bi-facebook mx-3' title='Facebook' />
-							<i className='bi bi-instagram mx-3' title='Instagram' />
-							<i className='bi bi-envelope mx-3' title='Email'/>
+							<a
+								className='mx-3'
+								title='Facebook'
+								href='https://www.facebook.com/kvirtivity'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<i className='bi bi-facebook' />
+							</a>
+							<a
+								className='mx-3'
+								href='https://www.instagram.com/kvirtivity'
+								title='Instagram'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<i className='bi bi-instagram' />
+							</a>
+							<a
+								href='mailto:info@kvirtivity.cz'
+								className='mx-3'
+								title='Email'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								<i className='bi bi-envelope'/>
+							</a>
 						</div>
 					</Col>
 					<Col md='6'>
