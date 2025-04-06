@@ -1,5 +1,4 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import Home from './components/home/Home';
 import Calendar from './components/calendar/Calendar';
 import NavbarContainer from './components/navbar/NavbarContainer';
 import GlobalContextProvider from './utils/GlobalContextProvider';

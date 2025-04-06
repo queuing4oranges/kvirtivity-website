@@ -22,7 +22,7 @@ export default function MobileNavbar() {
 				<LanguageSwitcher />
 			</span>
 			<Collapse isOpen={isOpen} navbar>
-				<Nav className="me-auto" navbar>
+				<Nav className='me-auto' navbar>
 					{navLinks && navLinks.map((link, idx) => (
 						<NavItem key={idx}>
 							<NavLink href={link.to}>{t(link.name)}</NavLink>

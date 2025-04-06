@@ -21,11 +21,7 @@ export default function NavbarContainer() {
 	
 	useEffect(()=>{
 		const handleResize = () => {
-			if (window.innerWidth <= 768) {
-				setShowMobileMenu(true)
-			} else {
-				setShowMobileMenu(false)
-			}
+			setShowMobileMenu(window.innerWidth <= 768);
 		};
 		
 		handleResize();
