@@ -24,13 +24,12 @@ export default function SingleEventContainer() {
 		name, description,
 		date, time,
 		price, capacity, latitude, longitude, signup,
-		event_type: typeOfEvent,
 		loc_name: locationName,
 		loc_website: website,
 		loc_address: address,
 		image_path: image
 	} = selectedEvent;
-	
+
 	//TODO Move to utils
 	// Create a calender event for Google user
 	const handleGoogleCalendar = () => {		
@@ -86,7 +85,7 @@ export default function SingleEventContainer() {
 		// Remove the link from the document
 		document.body.removeChild(link);
 	};
-//TODO align quotes to all single quotes!
+
 	return (
 		<div key={date} className='h-100 d-flex flex-column m-0 p-0'>
 			{!selectedEvent ? (

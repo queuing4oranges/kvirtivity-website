@@ -10,7 +10,11 @@ export const getDay = (datestring) => {
 	}
 
 	const date = new Date(datestring);
-	return date.getDay()
+	if(isNaN(date.getTime())) {
+		return ''; // Return empty string for invalid date format
+	}
+
+	return date.getDate(); // Return the day of the month (1-31)
 };
 
 // Get the abbreviated name of the month and localize it
