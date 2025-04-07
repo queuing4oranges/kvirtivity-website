@@ -26,8 +26,8 @@ export default function About() {
 
 	return (
 		<Container fluid className='min-vh-100 p-5 d-flex'>
-			<Row style={{ marginTop: '3rem' }}><h1>{t('O Nás')}</h1></Row>
-			<Row style={{ marginTop: '3rem' }} className='about-us-container w-75 mx-auto'>
+			<Row className='title-row'><h1>{t('O Nás')}</h1></Row>
+			<Row className='title-row about-us-container w-75 mx-auto'>
 				<Col md='4' className='d-flex flex-column justify-content-start p-5'>
 					{!activeText ?
 						<>

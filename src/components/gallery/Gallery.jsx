@@ -34,8 +34,8 @@ export default function Gallery() {
 
 	return (
 	<Container fluid className='min-vh-100 p-5 gallery-container d-flex'>
-		<Row style={{ marginTop: '3rem' }}><h1>{t('Galerie')}</h1></Row>
-		<Row className='gallery-images-container w-75 mx-auto' style={{ marginTop: '3rem'}}>
+		<Row className='title-row'><h1>{t('Galerie')}</h1></Row>
+		<Row className='title-row gallery-images-container w-75 mx-auto'>
 			{images && images.map((img, idx) =>  {
 				const RandomFrame = frames[Math.floor(Math.random() * frames.length)]
 				return (

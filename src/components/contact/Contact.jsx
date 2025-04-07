@@ -72,8 +72,8 @@ console.log(values); //TODO remove this line
 
 	return (
 		<Container fluid className='h-100 p-5 contact-container d-flex'>
-			<Row style={{ marginTop: '3rem' }}><h1>{t('Kontakt')}</h1></Row>
-			<Row className='contact-container w-75 m-auto' style={{ marginTop: '3rem' }}>
+			<Row className='title-row'><h1>{t('Kontakt')}</h1></Row>
+			<Row className='title-row contact-container w-75 m-auto'>
 				<Card className='contact-card-container d-flex flex-row p-5 h-75'>
 					<Col md='6' className='socials-column'>
 						<div><SocialMedia /></div>
