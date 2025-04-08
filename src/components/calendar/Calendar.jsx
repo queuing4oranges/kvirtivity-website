@@ -2,7 +2,7 @@ import { useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {
-	Container, Row
+	Container, Row, Col
 } from 'reactstrap';
 
 import { apiClient } from '../../api';
@@ -38,11 +38,11 @@ function Calendar() {
 	
 	return (
 		<Container fluid className='min-vh-100 p-2 p-md-5 calendar-container'>
-			<Row className='title-row'><h1>{t('Kalendář')}</h1></Row>
-			<div className='w-75 mx-auto d-flex events-wrapper flex-column align-items-center'>
+			<Col md={2} className='title-row'><h1>{t('Kalendář')}</h1></Col>
+			<Col xs={12} md={9} className='d-flex events-wrapper flex-column align-items-center'>
 				{(showSingleEvent === false)
 					? <>
-					<Row className='w-75' style={{ height: '3rem' }}></Row>
+					<Row style={{ height: '3rem' }}></Row>
 						<Row className='events-container'>
 							<EventsContainer />
 						</Row>
@@ -57,12 +57,12 @@ function Calendar() {
 								<Xicon width={30} height={30} color={'#fe00ec'}/>
 							</span>
 						</Row>
-						<Row className='single-event-container mx-auto h-100 g-0 p-5 position-relative'>
+						<Row className='single-event-container mx-auto h-100 g-0 p-2 p-md-5 position-relative'>
 							<SingleEventContainer/>
 						</Row>
 					</>
 				}
-			</div>
+			</Col>
 		</Container>
 	);
 }
