@@ -38,9 +38,9 @@ function Calendar() {
 	
 	return (
 		<Container fluid className='min-vh-100 p-2 p-md-5 calendar-container'>
-			<Row className='w-100'>
+			<Row className='w-100 mx-auto'>
 				<Col md={2} className='title-row'><h1>{t('Kalendář')}</h1></Col>
-				<Col xs={12} md={10} className='events-wrapper d-flex flex-column align-items-start'>
+				<Col xs={12} md={10} className='events-wrapper d-flex flex-column align-items-center align-items-md-start'>
 					{(showSingleEvent === false)
 						? <>
 						<Row style={{ height: '3rem' }}></Row>
