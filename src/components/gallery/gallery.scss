@@ -9,9 +9,9 @@
 
 	.gallery-images-container {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
-		grid-column-gap: 60px;
-		grid-row-gap: 60px;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
 	}
 }
