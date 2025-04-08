@@ -37,9 +37,9 @@ function Calendar() {
 	};
 	
 	return (
-		<Container fluid className='min-vh-100 p-4 p-md-5 calendar-container'>
+		<Container fluid className='min-vh-100 p-2 p-md-5 calendar-container'>
 			<Row className='title-row'><h1>{t('Kalendář')}</h1></Row>
-			<div className='w-100 d-flex events-wrapper flex-column align-items-center'>
+			<div className='w-75 mx-auto d-flex events-wrapper flex-column align-items-center'>
 				{(showSingleEvent === false)
 					? <>
 					<Row className='w-75' style={{ height: '3rem' }}></Row>
@@ -48,7 +48,7 @@ function Calendar() {
 						</Row>
 					</>
 					: <>
-						<Row className='w-75' style={{height: '3rem' }}>
+						<Row className='x-icon-row' style={{height: '3rem' }}>
 							<span
 								title={t('Zavřít')}
 								className='event-close-btn d-flex justify-content-end pe-0'
@@ -57,7 +57,7 @@ function Calendar() {
 								<Xicon width={30} height={30} color={'#fe00ec'}/>
 							</span>
 						</Row>
-						<Row className='single-event-container w-75 h-100 g-0 p-5 position-relative'>
+						<Row className='single-event-container mx-auto h-100 g-0 p-5 position-relative'>
 							<SingleEventContainer/>
 						</Row>
 					</>

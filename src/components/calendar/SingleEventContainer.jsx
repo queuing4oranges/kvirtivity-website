@@ -85,7 +85,7 @@ export default function SingleEventContainer() {
 		// Remove the link from the document
 		document.body.removeChild(link);
 	};
-
+//TODO align quotes to all single quotes!
 	return (
 		<div key={date} className='h-100 d-flex flex-column m-0 p-0'>
 			{!selectedEvent ? (
@@ -100,7 +100,7 @@ export default function SingleEventContainer() {
 						)}
 					</Row>
 					{/* TODO sign up button for speed dating etc. */}
-					<Row className='w-100 g-0 d-flex justify-content-between position-relative'>
+					<Row className='g-0 d-flex justify-content-between position-relative'>
 						<Col md={5} className='h-100'>
 							{date && (
 								<Row className='w-100'>

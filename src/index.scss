@@ -51,8 +51,17 @@ html, body, :root, #root {
 	margin-top: 3rem !important;
 }
 
+.x-icon-row {
+	width: 100%;
+}
+
 @media (max-width: 768px) {
 	.title-row {
 		margin-top: unset !important;
+		text-align: center;
+	}
+
+	.x-icon-row {
+		width: 100%;
 	}
 }
