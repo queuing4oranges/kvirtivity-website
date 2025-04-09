@@ -44,3 +44,19 @@ span.event-close-btn svg polygon {
 		background-color: vars.$primary-accent;
 	}
 }
+
+/* Tablets & Small Laptops (992px and below) */
+@media (max-width: 992px) {
+	.add-to-calendar-button {
+		.btn {
+			margin-left: 1rem;
+			margin-right: 1rem;
+		}
+	}
+
+	.sign-up-button {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2rem;
+	}
+}

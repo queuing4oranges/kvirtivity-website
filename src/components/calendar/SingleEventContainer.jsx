@@ -101,109 +101,109 @@ export default function SingleEventContainer() {
 					</Row>
 					{/* TODO sign up button for speed dating etc. */}
 					<Row className='g-0 d-flex justify-content-between position-relative'>
-						<Col md={5} className='h-100'>
+						<Col md={5}>
 							{date && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-calendar2-heart' />
-								</Col>
-								<Col>
-									<p>{formatDateWithTranslation(date)}</p>
-								</Col>
+									<Col xs={1} md={1}>
+										<i className='bi bi-calendar2-heart' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{formatDateWithTranslation(date)}</p>
+									</Col>
 								</Row>
 							)}
 							{time && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-clock' />
-								</Col>
-								<Col>
-									<p>{time}</p>
+									<Col xs={1} md={1}>
+										<i className='bi bi-clock' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{time}</p>
 								</Col>
 								</Row>
 							)}
 							{locationName && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-geo-alt' />
-								</Col>
-								<Col>
-									<p>{locationName}</p>
-								</Col>
+									<Col xs={1} md={1}>
+										<i className='bi bi-geo-alt' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{locationName}</p>
+									</Col>
 								</Row>
 							)}
 							{website && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-globe' />
-								</Col>
-								<Col>
-									<a
-										href={website}
-										target='_blank'
-										rel='noopener noreferer'
-										className='text-decoration-none'
-									>
-										<p>{website}</p>
-									</a>
+									<Col xs={1} md={1}>
+										<i className='bi bi-globe' />
+									</Col>
+									<Col xs={11} md={11}>
+										<a
+											href={website}
+											target='_blank'
+											rel='noopener noreferer'
+											className='text-decoration-none'
+										>
+											<p>{website}</p>
+										</a>
 								</Col>
 								</Row>
 							)}
 							{address && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-map' />
-								</Col>
-								<Col>
-									<p>{address}</p>
-								</Col>
+									<Col xs={1} md={1}>
+										<i className='bi bi-map' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{address}</p>
+									</Col>
 								</Row>
 							)}
 							{price != null && price !== 0 && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-cash-coin' />
-								</Col>
-								<Col>
-									<p>{price}</p>
-								</Col>
+									<Col xs={1} md={1}>
+										<i className='bi bi-cash-coin' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{price}</p>
+									</Col>
 								</Row>
 							)}
 							{capacity != null && capacity !== 0 && (
 								<Row className='w-100'>
-								<Col md={1}>
-									<i className='bi bi-people' />
-								</Col>
-								<Col>
-									<p>{capacity}</p>
-								</Col>
+									<Col xs={1} md={1}>
+										<i className='bi bi-people' />
+									</Col>
+									<Col xs={11} md={11}>
+										<p>{capacity}</p>
+									</Col>
 								</Row>
 							)}
 							{(description != null && description !== '') && (
 								<Row className='w-100'>
-									<Col md={1}>
+									<Col xs={1} md={1}>
 										<i className='bi bi-info-square' />
 									</Col>
-									<Col>
+									<Col xs={11} md={11}>
 										<p>{description}</p>
 									</Col>
 								</Row>
 							)}
 							{(signup != null && signup === 1) && (
-								<Row className=''>
-								<Col md={6} className=''>
-									<CustomButton
-										buttonTitle={t('Events.Přihlášeni')}
-										name={t('Events.Přihlášeni')}
-										iconName='bi bi-person-plus'
-									/>
-								</Col>
+								<Row>
+									<Col md={6} className='sign-up-button'>
+										<CustomButton
+											buttonTitle={t('Events.Přihlášeni')}
+											name={t('Events.Přihlášeni')}
+											iconName='bi bi-person-plus'
+										/>
+									</Col>
 								</Row>
 							)}
 						</Col>
 						<Col
-							md={2}
-							className='mt-1 add-to-calendar-button d-flex flex-column align-items-center'
+							xs={12} md={2}
+								className='mt-1 add-to-calendar-button d-flex flex-sm-row flex-md-column align-items-center justify-content-center justify-content-md-start'
 						>
 							<Button
 								color='info'

@@ -58,7 +58,7 @@ function Calendar() {
 									<Xicon width={30} height={30} color={'#fe00ec'}/>
 								</span>
 							</Row>
-							<Row className='single-event-container mx-auto h-100 g-0 p-2 p-md-5 position-relative'>
+							<Row className='single-event-container mx-auto h-100 g-0 p-3 p-md-5 position-relative'>
 								<SingleEventContainer/>
 							</Row>
 						</>
