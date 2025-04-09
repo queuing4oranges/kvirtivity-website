@@ -29,8 +29,8 @@ export default function About() {
 			<Row className='w-100 mx-auto'>
 				<Col md={2} className='title-row'><h1>{t('O Nás')}</h1></Col>
 				<Col xs={12} md={10} className='title-row'>
-					<Row>
-						<Col md='3' className='about-text-column d-flex flex-column justify-content-start p-5'>
+					<Row className='text-svg-row'>
+						<Col sm={12} md={4} className='about-text-column p-5'>
 							{!activeText ?
 								<>
 									<strong className='text-uppercase'>We are Kvírtivity</strong>
@@ -47,8 +47,8 @@ export default function About() {
 								</>
 							}
 						</Col>
-						<Col md='9' className='about-svg-column d-flex justify-content-center'>
-							<div className='d-flex align-items-start justify-content-end'>
+						<Col sm={12} md={8} className='about-svg-column'>
+							<div className=''>
 								<svg width='750' height='750' viewBox='120 120 720 720' fill='none' xmlns='http://www.w3.org/2000/svg'>
 									<defs>
 										{/* Define a circular clip path */}

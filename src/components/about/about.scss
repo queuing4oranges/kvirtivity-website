@@ -21,4 +21,37 @@ svg
 
 .about-text-column {
 	font-size: 1.2rem;
+	strong {
+		margin-bottom: 2rem;
+	}
+}
+
+.about-text-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+// Tablets & Small Laptops (768px and below)
+@media (max-width: 768px) {
+	.about-svg-column svg {
+		margin-top: 3rem;
+		width: 80%;
+		height: auto;
+	}
+
+	.about-text-column {
+		font-size: 1rem;
+	}
+
+	.text-svg-row {
+		display: flex;
+		flex-direction: column-reverse
+	}
+
+	.about-svg-column {
+		display: flex;
+		justify-content: center !important;
+		align-items: center;
+	}
 }
