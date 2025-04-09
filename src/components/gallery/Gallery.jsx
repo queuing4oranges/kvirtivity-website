@@ -34,7 +34,7 @@ export default function Gallery() {
 
 	return (
 		<Container fluid className='min-vh-100 p-2 p-md-5 gallery-container'>
-			<Row>
+			<Row className='w-100 mx-auto'>
 				<Col md={2} className='title-row'><h1>{t('Galerie')}</h1></Col>
 				<Col xs={12} md={10} className='title-row gallery-images-container'>
 					{images && images.map((img, idx) =>  {
