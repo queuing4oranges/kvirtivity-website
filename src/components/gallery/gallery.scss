@@ -1,7 +1,7 @@
 @use '../../../src/variables.scss' as vars;
 
 .gallery-container {
-	background-color: vars.$primary-bg;
+	background-image: url('/assets/gallery-bg.svg');
 
 	h1 {
 		color: vars.$text-color;

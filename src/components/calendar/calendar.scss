@@ -1,7 +1,7 @@
 @use '../../../src/variables.scss' as vars;
 
 .calendar-container {
-	background-color: vars.$primary-bg;
+	background-image: url('/assets/calendar-bg.svg');
 	display: flex;
 
 	h1 {

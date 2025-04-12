@@ -1,5 +1,18 @@
+@use '../../../src/variables.scss' as vars;
+
 .mobile-navbar{
 	.navbar-toggler, .navbar-toggler:focus {
 		border: none;
+	}
+
+	.mobile-navbar-toggle-btn {
+		width: 4rem;
+		height: 4rem;
+		border-color: transparent;
+		color: vars.$primary-accent;
+
+		.bi-three-dots:before {
+			color: vars.$primary-accent;
+		}
 	}
 }

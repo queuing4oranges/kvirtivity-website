@@ -132,6 +132,21 @@
 
 @media (max-width: 768px) {
 	.contact-container {
-		background-image: url('/assets/kvir-contact-bg-mobile.svg');
+		background-image: url('/assets/kvir-contact-bg.svg');
+		margin-bottom: 3rem;
+	}
+
+	.contact-form-column {
+		margin-top: 3rem !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact-socials-icons-container {
+		a {
+			font-size: 2.5rem !important;
+		}
 	}
 }

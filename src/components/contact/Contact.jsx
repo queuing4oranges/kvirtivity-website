@@ -71,99 +71,100 @@ console.log(values); //TODO remove this line
 	}
 
 	return (
-		<Container fluid className='h-100 p-5 contact-container d-flex'>
-			<Row className='title-row'><h1>{t('Kontakt')}</h1></Row>
-			<Row className='title-row contact-container w-75 m-auto'>
-				<Card className='contact-card-container d-flex flex-row p-5 h-75'>
-					<Col md='6' className='socials-column'>
-						<div><SocialMedia /></div>
-						<div className='contact-socials-icons-container d-flex justify-content-center'>
-							<a
-								className='mx-3 a-icon'
-								title='Facebook'
-								href='https://www.facebook.com/kvirtivity'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								<i className='bi bi-facebook' />
-							</a>
-							<a
-								className='mx-3 a-icon'
-								href='https://www.instagram.com/kvirtivity'
-								title='Instagram'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								<i className='bi bi-instagram' />
-							</a>
-							<a
-								className='mx-3 a-icon'
-								href='mailto:info@kvirtivity.cz'
-								title='Email'
-								target='_blank'
-								rel='noopener noreferrer'
-							>
-								<i className='bi bi-envelope'/>
-							</a>
-						</div>
-					</Col>
-					<Col md='6'>
-						<Form ref={contactForm} onSubmit={handleSubmit(sendContactForm)} className='p-5'>
-							<FormGroup>
-								<Label>{t('ContactUs.Jméno')}</Label>
-								<input
-									className={`form-control ${errors.userName ? 'is-invalid' : ''}`}
-									type='text'
-									invalid={errors.userName && 'true'}
-									id='userName'
-									name='userName'
-									autoComplete='off'
-									{...userName}
-								/>
-								{errors?.userName &&
-									<FormFeedback>
-										{errors.userName.message}
-									</FormFeedback>
-								}
-							</FormGroup>
-							<FormGroup>
-								<Label>Email</Label>
-								<input
-									className={`form-control ${errors.email ? 'is-invalid' : ''}`}
-									type='email'
-									invalid={errors.email && 'true'}
-									id='email'
-									name='email'
-									autoComplete='off'
-									{...email}
-								/>
-								{errors.email &&
-									<FormFeedback>
-										{errors.email.message}
-									</FormFeedback>
-								}
-							</FormGroup>
-							<FormGroup>
-								<Label>{t('ContactUs.Zpráva')}</Label>
-								<textarea
-									className={`form-control ${errors.message ? 'is-invalid' : ''}`}
-									type='textarea'
-									invalid={errors.message && 'true'}
-									id='message'
-									name='message'
-									autoComplete='off'
-									{...message}
-									rows='5'
-								/>
-								{errors.message &&
-									<FormFeedback>
-										{errors.message.message}</FormFeedback>}
-							</FormGroup>
-							<Button type='submit' color='info' className='custom-button'>{t('ContactUs.Odeslat')}</Button>
-						</Form>
-					</Col>
-					
-				</Card>
+		<Container fluid className='p-2 p-md-5 contact-container'>
+			<Row className='w-100 mx-auto'>
+				<Col md={2} className='title-row'><h1>{t('Kontakt')}</h1></Col>
+				<Col xs={12} md={10} className='contact-form-column'>
+					<Row className='title-row w-75 contact-card-container p-2 p-md-5'>
+						<Col md={6} className='socials-column'>
+							<div><SocialMedia /></div>
+							<div className='contact-socials-icons-container d-flex justify-content-center'>
+								<a
+									className='mx-3 a-icon'
+									title='Facebook'
+									href='https://www.facebook.com/kvirtivity'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<i className='bi bi-facebook' />
+								</a>
+								<a
+									className='mx-3 a-icon'
+									href='https://www.instagram.com/kvirtivity'
+									title='Instagram'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<i className='bi bi-instagram' />
+								</a>
+								<a
+									className='mx-3 a-icon'
+									href='mailto:info@kvirtivity.cz'
+									title='Email'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<i className='bi bi-envelope'/>
+								</a>
+							</div>
+						</Col>
+						<Col md={6}>
+							<Form ref={contactForm} onSubmit={handleSubmit(sendContactForm)} className='p-2 p-md-5'>
+								<FormGroup>
+									<Label>{t('ContactUs.Jméno')}</Label>
+									<input
+										className={`form-control ${errors.userName ? 'is-invalid' : ''}`}
+										type='text'
+										invalid={errors.userName && 'true'}
+										id='userName'
+										name='userName'
+										autoComplete='off'
+										{...userName}
+									/>
+									{errors?.userName &&
+										<FormFeedback>
+											{errors.userName.message}
+										</FormFeedback>
+									}
+								</FormGroup>
+								<FormGroup>
+									<Label>Email</Label>
+									<input
+										className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+										type='email'
+										invalid={errors.email && 'true'}
+										id='email'
+										name='email'
+										autoComplete='off'
+										{...email}
+									/>
+									{errors.email &&
+										<FormFeedback>
+											{errors.email.message}
+										</FormFeedback>
+									}
+								</FormGroup>
+								<FormGroup>
+									<Label>{t('ContactUs.Zpráva')}</Label>
+									<textarea
+										className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+										type='textarea'
+										invalid={errors.message && 'true'}
+										id='message'
+										name='message'
+										autoComplete='off'
+										{...message}
+										rows='5'
+									/>
+									{errors.message &&
+										<FormFeedback>
+											{errors.message.message}</FormFeedback>}
+								</FormGroup>
+								<Button type='submit' color='info' className='custom-button'>{t('ContactUs.Odeslat')}</Button>
+							</Form>
+						</Col>
+					</Row>
+				</Col>
 			</Row>
 		</Container>
 	)

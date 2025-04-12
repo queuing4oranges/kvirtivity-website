@@ -14,7 +14,7 @@ function App() {
 				<BrowserRouter basename='/'>
 					<NavbarContainer/>
 					<Routes>
-						<Route path='/' element={<Calendar />} />
+						<Route exact path='/' element={<Calendar />} />
 						<Route path='/galerie' element={<Gallery />} />
 						<Route path='/o-nas' element={<About />} />
 						<Route path='/kontakt' element={<Contact />} />
