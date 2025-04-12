@@ -11,5 +11,16 @@ export default defineConfig({
 				// additionalData: `@use "src/variables.scss";`
 			}
 		}
-	}
+	},
+	server: {
+		open: true,
+		historyApiFallback: true, // Ensures all routes are served to index.html
+	},
+	build: {
+		rollupOptions: {
+			output: {
+				manualChunks: undefined, // Optional: Optimize chunking
+			},
+		},
+	},
 })
