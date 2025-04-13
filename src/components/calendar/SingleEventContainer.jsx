@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import moment from 'moment-timezone';
 
@@ -11,10 +11,12 @@ import NoEventCard from './NoEventCard.jsx';
 import CustomButton from '../../includes/CustomButton.jsx';
 
 import './singleeventcontainer.scss';
+import SignupForm from './SignupForm.jsx';
 
 export default function SingleEventContainer() {
 	const { t } = useTranslation();
 	const { events, singleEventId } = useContext(GlobalContext);
+	const [modal, setModal] = useState(false);
 
 	// Find selected event in events array
 	const selectedEvent = events.find((event) => event.id === singleEventId);
@@ -196,6 +198,7 @@ export default function SingleEventContainer() {
 											buttonTitle={t('Events.Přihlášeni')}
 											name={t('Events.Přihlášeni')}
 											iconName='bi bi-person-plus'
+											onClick={() => setModal(!modal)}
 										/>
 									</Col>
 								</Row>
@@ -256,6 +259,15 @@ export default function SingleEventContainer() {
 							/>
 						</div>
 					</Row>
+					{modal &&
+						<SignupForm
+							modal={modal}
+							setModal={setModal}
+							name={name}
+							date={date}
+							time={time}
+						/>
+					}
 				</>
 			)}
 		</div>

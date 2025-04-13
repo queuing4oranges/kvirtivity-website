@@ -4,6 +4,7 @@
 	"O Nás": "About us",
 	"Kontakt": "Contact",
 	"Zavřít": "Close",
+	"Povinné údaje": "Required field",
 
 	"Events": {
 		"Přihlášeni": "Sign up",
@@ -37,5 +38,15 @@
 		"Zpráva": "Message",
 		"Odeslat": "Send",
 		"Povinné údaje": "Required field"
+	},
+
+	"Signup": {
+		"Jméno": "Name",
+		"Zaregistrujte se!": "Sign me up!",
+		"Telefon": "Phone",
+		"Nespravne formát": "Invalid format",
+		"Věk": "Age",
+		"Sdílej, pokud chceš.": "Share if you wish",
+		"Chci dostávat informace o dalších akcích.": "I would like to receive information about other events"
 	}
 }

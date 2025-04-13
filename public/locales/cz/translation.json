@@ -4,6 +4,7 @@
 	"O Nás": "O Nás",
 	"Kontakt": "Kontakt",
 	"Zavřít": "Zavřít",
+	"Povinné údaje": "Povinné údaje",
 
 	"Events": {
 		"Přihlášeni": "Přihlášeni",
@@ -37,5 +38,15 @@
 		"Zpráva": "Zpráva",
 		"Odeslat": "Odeslat",
 		"Povinné údaje": "Povinné údaje"
+	},
+
+	"Signup": {
+		"Jméno": "Jméno",
+		"Zaregistrujte se!": "Zaregistrujte se!",
+		"Telefon": "Telefon",
+		"Nespravne formát": "Nespravne formát",
+		"Věk": "Věk",
+		"Sdílej, pokud chceš.": "Sdílej, pokud chceš.",
+		"Chci dostávat informace o dalších akcích.": "Chci dostávat informace o dalších akcích."
 	}
 }
