@@ -1,0 +1,15 @@
+@use '../../../kvirtivity-website/src/variables.scss' as vars;
+
+.footer-flag {
+	color: vars.$primary-accent;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 10px;
+	background-color: vars.$secondary-bg;
+	border-top-right-radius: 1rem;
+	& i {
+		color: vars.$primary-accent;
+	}
+}

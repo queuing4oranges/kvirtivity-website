@@ -11,6 +11,7 @@ import {
 import SocialMedia from '../../assets/SocialMedia.jsx';
 
 import './contact.scss';
+import FooterFlag from '../../includes/FooterFlag.jsx';
 //TODO add links to icons
 //TODO add animation to send button or a toast
 // TODO the send button needs fixed width to not change when changing language
