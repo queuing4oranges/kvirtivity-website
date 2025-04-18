@@ -41,10 +41,42 @@ export default function NavbarContainer() {
 			) : (
 				<Container fluid className='navbar-container'>
 					<Navbar>
-						<Col md='3'>
+						<Col md='2'>
 							<NavLink href={'/'}><KvirtivityLogo height={50} width={150}/></NavLink>
 						</Col>
-						<Col md='8' className='d-flex justify-content-end'>
+						{/* TODO move this actually underneath the title of each screen */}
+						<Col md='4'>
+							<div className='fs-2 social-media'>
+								<a
+									className='mx-3 a-icon'
+									href='https://www.facebook.com/kvirtivity'
+									target='_blank'
+									rel='noopener noreferrer'
+									title={t('Navbar.Kvírtivity na Facebooku')}
+								>
+									<i className='bi bi-facebook' />
+								</a>
+								<a
+									className='mx-3 a-icon'
+									href='https://www.instagram.com/kvirtivity'
+									title={t('Navbar.Kvírtivity na Instagramu')}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<i className='bi bi-instagram' />
+								</a>
+								<a
+									className='mx-3 a-icon'
+									href='mailto:info@kvirtivity.cz'
+									title={t('Navbar.Spojte se s Kvírtivity')}
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									<i className='bi bi-envelope' />
+								</a>
+							</div>
+						</Col>
+						<Col md='5' className='d-flex justify-content-end'>
 							<Nav>
 								{navLinks && navLinks.map((link, idx) => (
 									<NavItem key={idx}>
@@ -59,7 +91,6 @@ export default function NavbarContainer() {
 							</Nav>
 						</Col>
 						<Col md='1' className='d-flex justify-content-end'>
-						{/* TODO make switcher somewhat responsive */}
 							<LanguageSwitcher />
 						</Col>
 					</Navbar>

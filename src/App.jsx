@@ -8,7 +8,7 @@ import Contact from './components/contact/Contact';
 
 import './App.scss';
 import FooterFlag from './includes/FooterFlag';
-// TODO Create some tag with my name and github link
+
 function App() {
 	return (
 		<GlobalContextProvider>

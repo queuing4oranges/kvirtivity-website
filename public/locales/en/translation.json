@@ -6,6 +6,12 @@
 	"Zavřít": "Close",
 	"Povinné údaje": "Required field",
 
+	"Navbar": {
+		"Kvírtivity na Facebooku": "Kvírtivity on Facebook",
+		"Kvírtivity na Instagramu": "Kvírtivity on Instagram",
+		"Spojte se s Kvírtivity": "Get in touch with Kvírtivity"
+	},
+
 	"Events": {
 		"Přihlášeni": "Sign up",
 		"Přidat do Kalendáře Google": "Add to Google calendar",
