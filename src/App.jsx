@@ -11,18 +11,20 @@ import FooterFlag from './includes/FooterFlag';
 
 function App() {
 	return (
-		<GlobalContextProvider>
-			<BrowserRouter basename='/'>
-				<NavbarContainer/>
-				<Routes>
-					<Route exact path='/' element={<Calendar />} />
-					<Route path='/galerie' element={<Gallery />} />
-					<Route path='/o-nas' element={<About />} />
-					<Route path='/kontakt' element={<Contact />} />
-				</Routes>
-			</BrowserRouter>
-			<FooterFlag />
-		</GlobalContextProvider>
+		<div className='position-relative h-100'>
+			<GlobalContextProvider>
+				<BrowserRouter basename='/'>
+					<NavbarContainer/>
+					<Routes>
+						<Route exact path='/' element={<Calendar />} />
+						<Route path='/galerie' element={<Gallery />} />
+						<Route path='/o-nas' element={<About />} />
+						<Route path='/kontakt' element={<Contact />} />
+					</Routes>
+				</BrowserRouter>
+				<FooterFlag />
+			</GlobalContextProvider>
+		</div>
 	);
 }
 
