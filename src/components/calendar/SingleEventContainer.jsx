@@ -87,7 +87,7 @@ export default function SingleEventContainer() {
 		// Remove the link from the document
 		document.body.removeChild(link);
 	};
-//TODO align quotes to all single quotes!
+
 	return (
 		<div key={date} className='h-100 d-flex flex-column m-0 p-0'>
 			{!selectedEvent ? (

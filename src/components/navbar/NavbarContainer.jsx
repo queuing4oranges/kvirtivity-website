@@ -44,7 +44,6 @@ export default function NavbarContainer() {
 						<Col md='2'>
 							<NavLink href={'/'}><KvirtivityLogo height={50} width={150}/></NavLink>
 						</Col>
-						{/* TODO move this actually underneath the title of each screen */}
 						<Col md='4'>
 							<div className='fs-2 social-media'>
 								<a

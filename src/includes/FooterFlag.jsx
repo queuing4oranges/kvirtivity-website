@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import './footerflag.scss';
 import { Collapse } from 'reactstrap';
 
-//TODO setup mobile version with flag in the bottom/middle
 export default function FooterFlag() {
 	const [isOpen, setIsOpen] = useState(false);
 	const currentYear = new Date().getFullYear();

@@ -12,9 +12,9 @@ import SocialMedia from '../../assets/SocialMedia.jsx';
 
 import './contact.scss';
 import FooterFlag from '../../includes/FooterFlag.jsx';
-//TODO add links to icons
+
 //TODO add animation to send button or a toast
-// TODO the send button needs fixed width to not change when changing language
+
 export default function Contact() {
 	const { t } = useTranslation();
 	const { register, handleSubmit, formState: { errors } } = useForm();
@@ -76,7 +76,7 @@ console.log(values); //TODO remove this line
 			<Row className='w-100 mx-auto'>
 				<Col md={2} className='title-row'><h1>{t('Kontakt')}</h1></Col>
 				<Col xs={12} md={10} className='contact-form-column'>
-					<Row className='title-row w-75 contact-card-container p-2 p-md-5'>
+					<Row className='title-row w-100 w-md-75 contact-card-container p-2 p-md-5'>
 						<Col md={6} className='socials-column'>
 							<div><SocialMedia /></div>
 							<div className='contact-socials-icons-container d-flex justify-content-center'>
